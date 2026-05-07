@@ -1,0 +1,751 @@
+{
+  "defaultLanguage": "es",
+  "languages": [
+    {
+      "code": "es",
+      "label": "Español",
+      "shortLabel": "ES"
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "shortLabel": "EN"
+    }
+  ],
+  "translations": {
+    "es": {
+      "meta": {
+        "siteName": "Grupo Integral Basilea"
+      },
+      "nav": {
+        "home": "Inicio",
+        "about": "Somos GIB",
+        "farm": "Finca Basilea",
+        "inn": "Posada Basilea",
+        "consulting": "Consultoría",
+        "contact": "Contáctanos",
+        "more": "Más"
+      },
+      "common": {
+        "brandAlt": "Grupo Integral Basilea",
+        "learnMore": "Conocer más",
+        "contactCtaTitle": "Explore oportunidades con nosotros",
+        "contactCtaText": "Comuníquese con nosotros para explorar oportunidades de colaboración.",
+        "contactCtaButton": "Contáctanos",
+        "socialTitle": "Conéctate con nosotros"
+      },
+      "footer": {
+        "business": "Grupo Integral Basilea",
+        "location": "Ciudad de Guatemala, Centroamérica",
+        "international": "Intl:",
+        "guatemala": "GT:",
+        "copyright": "© 2026 Grupo Integral Basilea"
+      },
+      "form": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "submit": "Enviar"
+      },
+      "pages": {
+        "home": {
+          "title": "Inicio",
+          "description": "Grupo Integral Basilea: agricultura, turismo, consultoría internacional y productos agrícolas de calidad.",
+          "hero": {
+            "variant": "video",
+            "media": "assets/videos/hero-video.mp4",
+            "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.png",
+            "eyebrow": "Grupo Integral Basilea",
+            "title": "Grupo Integral Basilea",
+            "subtitle": "Desarrollamos proyectos que conectan agricultura, turismo y consultoría internacional",
+            "button": "Conocer más sobre GIB",
+            "href": "/about"
+          },
+          "sections": [
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Posada Basilea",
+                  "label": "Posada",
+                  "text": "Un espacio de descanso frente al mar en la Bahía de Amatique, diseñado para disfrutar de la tranquilidad del Caribe guatemalteco.",
+                  "image": "assets/images/1_header.png",
+                  "href": "/inn"
+                },
+                {
+                  "title": "Finca Basilea",
+                  "label": "Finca",
+                  "text": "Producción ganadera y cultivo de cacao en Izabal, desarrollados bajo principios de manejo responsable y calidad productiva.",
+                  "image": "assets/images/finca-basilea.png",
+                  "href": "/farm"
+                },
+                {
+                  "title": "Consultoría Internacional",
+                  "label": "Consultoría",
+                  "text": "Asesoría estratégica para el desarrollo y modernización de sistemas de transporte aéreo, sistemas logísticos y finanzas.",
+                  "image": "assets/images/banner_consultoria.jpg",
+                  "href": "/consulting"
+                }
+              ]
+            },
+            {
+              "type": "center",
+              "title": "Una visión integral",
+              "text": "Somos una empresa con base en Guatemala que impulsa proyectos en distintos sectores productivos y de servicios, con un enfoque en conocimiento especializado, responsabilidad y valor sostenible."
+            },
+            {
+              "type": "cta"
+            },
+            {
+              "type": "social"
+            }
+          ]
+        },
+        "about": {
+          "title": "Somos GIB",
+          "description": "Grupo Integral Basilea desarrolla proyectos sostenibles en agricultura, turismo, logística, finanzas y consultoría especializada.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/banner_gib.png",
+            "title": "Construimos iniciativas sostenibles con visión de largo plazo."
+          },
+          "sections": [
+            {
+              "type": "textImage",
+              "title": "Nuestra trayectoria",
+              "image": "assets/images/5_foto-inferior.png",
+              "paragraphs": [
+                "GIB es una sociedad anónima constituida en Guatemala en 2014, dedicada al desarrollo de proyectos inmobiliarios, agropecuarios, turísticos y de servicios especializados.",
+                "A lo largo de los años, la empresa ha desarrollado distintas iniciativas orientadas a generar valor sostenible, promoviendo prácticas responsables y el uso adecuado de los recursos.",
+                "Actualmente, GIB desarrolla sus actividades a través de cinco ramas principales: la explotación agropecuaria de fincas, la operación de proyectos turísticos, la prestación de servicios internacionales de consultoría en transporte aéreo, así como servicios de logística y gestión financiera."
+              ]
+            },
+            {
+              "type": "center",
+              "title": "Acerca de Grupo Integral Basilea",
+              "text": "Grupo Integral Basilea integra experiencia, inversión y operación en proyectos que buscan aportar valor sostenible desde Guatemala hacia mercados nacionales e internacionales."
+            },
+            {
+              "type": "columns",
+              "items": [
+                {
+                  "title": "Nuestra Visión",
+                  "text": "Ser una empresa reconocida por impulsar proyectos responsables y sostenibles que contribuyan al desarrollo económico y al uso responsable de los recursos en los lugares donde operamos."
+                },
+                {
+                  "title": "Nuestra Misión",
+                  "text": "Desarrollar proyectos en distintos sectores productivos y de servicios que generen valor sostenible, combinando conocimiento especializado, responsabilidad y una visión de largo plazo."
+                }
+              ]
+            },
+            {
+              "type": "values",
+              "title": "Valores",
+              "items": [
+                "Responsabilidad",
+                "Innovación",
+                "Sostenibilidad",
+                "Compromiso"
+              ]
+            },
+            {
+              "type": "banner",
+              "image": "assets/images/4_valores-cd939b3.jpg",
+              "title": "Compromiso con el desarrollo sostenible"
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "farm": {
+          "title": "Finca Basilea",
+          "description": "Finca Basilea: producción agropecuaria responsable en Izabal, enfocada en ganadería y cultivo de cacao.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/finca-basilea.png",
+            "title": "Producción agropecuaria responsable en Izabal"
+          },
+          "sections": [
+            {
+              "type": "textImage",
+              "title": "Finca Basilea",
+              "image": "assets/images/3_ganaderia.png",
+              "paragraphs": [
+                "En el corazón de Izabal, cerca de Entre Ríos, operamos Finca Basilea, un proyecto agropecuario enfocado en la cría de ganado y el cultivo de productos agrícolas especializados.",
+                "Nuestra actividad principal es el levantamiento y mejoramiento de ganado, incluyendo el desarrollo de líneas genéticas y reproductores, con el objetivo de producir reses sanas y fuertes que permitan ofrecer carne de primera calidad para el mercado nacional."
+              ]
+            },
+            {
+              "type": "featureGrid",
+              "items": [
+                {
+                  "title": "Ganadería",
+                  "text": "Nuestra operación ganadera se enfoca en el desarrollo de líneas genéticas de alto valor y el mejoramiento continuo del ganado.",
+                  "image": "assets/images/3_ganaderia.png"
+                },
+                {
+                  "title": "Manejo responsable",
+                  "text": "La finca prioriza el uso mínimo de productos químicos y favorece prácticas naturales que fortalecen el equilibrio del ecosistema productivo.",
+                  "image": "assets/images/manejo_reponsable.png"
+                },
+                {
+                  "title": "Cacao",
+                  "text": "Desde 2022 el proyecto también incluye el cultivo de cacao, con el objetivo de desarrollar un producto de alta calidad y avanzar hacia una cadena de valor que incluya fermentación y secado.",
+                  "image": "assets/images/cacao.png"
+                }
+              ]
+            },
+            {
+              "type": "center",
+              "title": "Ganadería moderna y responsable",
+              "text": "Buscamos impulsar una ganadería moderna que combine eficiencia productiva con prácticas responsables. Producimos carne natural, con ganado criado en libertad y enfocado en su bienestar."
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "inn": {
+          "title": "Posada Basilea",
+          "description": "Descubre Posada Basilea, un espacio de descanso frente al mar en la Bahía de Amatique.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/1_header.png",
+            "title": "Un refugio frente al mar"
+          },
+          "sections": [
+            {
+              "type": "textImage",
+              "title": "Posada Basilea",
+              "image": "assets/images/2022-11-26-13-16-48-pb260131.jpg",
+              "paragraphs": [
+                "Posada Basilea se encuentra en Santa María del Mar, en la Bahía de Amatique, uno de los entornos naturales más atractivos del Caribe guatemalteco.",
+                "La posada busca ofrecer un espacio de descanso donde los visitantes puedan disfrutar de la naturaleza, el mar y la tranquilidad del lugar."
+              ]
+            },
+            {
+              "type": "columns",
+              "items": [
+                {
+                  "title": "Un espacio diseñado para el descanso",
+                  "text": "La posada cuenta con dos unidades de alojamiento completamente equipadas, diseñadas para brindar comodidad y privacidad."
+                },
+                {
+                  "title": "Experiencias para explorar",
+                  "text": "La posada ofrece excursiones a destinos cercanos como Livingston, Río Dulce y el Castillo de San Felipe."
+                }
+              ]
+            },
+            {
+              "type": "featureGrid",
+              "items": [
+                {
+                  "title": "Playa privada",
+                  "text": "Los huéspedes tienen acceso a playa privada, muelle y espacios para disfrutar del entorno natural.",
+                  "image": "assets/images/2.1_circulo-5755132.png"
+                },
+                {
+                  "title": "Descanso frente al mar",
+                  "text": "Un ambiente tranquilo para desconectarse y vivir el Caribe guatemalteco.",
+                  "image": "assets/images/2.2_circulo-07de9e4.png"
+                },
+                {
+                  "title": "Reservas por Airbnb",
+                  "text": "Las reservaciones se realizan a través de Airbnb. Consulte disponibilidad y haga su reserva.",
+                  "image": "assets/images/3_fotolink-aribnb-4a3f571.png",
+                  "button": "Reservar en Airbnb",
+                  "href": "https://www.airbnb.com/rooms/29795352?unique_share_id=2d42e30f-2aed-4d42-b144-f63effd7bfc4&viralityEntryPoint=1&s=76"
+                }
+              ]
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "consulting": {
+          "title": "Consultoría",
+          "description": "Consultoría de transporte aéreo y aviación con expertos internacionales para el desarrollo y sostenibilidad del sector.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/banner_consultoria.jpg",
+            "title": "Experiencia internacional para un sector en evolución"
+          },
+          "sections": [
+            {
+              "type": "center",
+              "title": "Consultoría Internacional",
+              "text": "Somos un equipo senior de expertos internacionales en transporte aéreo que brinda servicios especializados de consultoría para el desarrollo de sistemas de transporte aéreo a nivel global. Nuestro enfoque se centra en apoyar el crecimiento estratégico, la modernización y la sostenibilidad de los servicios e infraestructuras de aviación."
+            },
+            {
+              "type": "featureGrid",
+              "items": [
+                {
+                  "title": "Estrategia y modernización",
+                  "text": "Asesoría para el crecimiento estratégico y la modernización de sistemas de transporte aéreo.",
+                  "image": "assets/images/servicios_gib.png"
+                },
+                {
+                  "title": "Infraestructura y financiamiento",
+                  "text": "Experiencia en financiamiento, desarrollo y estructuración de proyectos multilaterales.",
+                  "image": "assets/images/airplane-wing-view-out-window.jpg"
+                },
+                {
+                  "title": "Sostenibilidad sectorial",
+                  "text": "Apoyo técnico para fortalecer servicios e infraestructuras de aviación con visión sostenible.",
+                  "image": "assets/images/consultoria_gib.jpeg"
+                }
+              ]
+            },
+            {
+              "type": "center",
+              "title": "Experiencia global",
+              "text": "Somos un equipo internacional con sólida experiencia sectorial en todas las regiones del mundo. Durante décadas hemos trabajado con instituciones financieras internacionales líderes, incluyendo el Banco Mundial y el Banco Interamericano de Desarrollo (BID) en Washington, D.C., aportando un profundo conocimiento en el desarrollo y financiamiento de proyectos multilaterales."
+            },
+            {
+              "type": "center",
+              "text": "Para brindar el mejor servicio a nuestros clientes globales, nuestro equipo maneja mandatos con éxito en inglés, español, portugués, francés, alemán, árabe y ruso."
+            },
+            {
+              "type": "profiles",
+              "items": [
+                {
+                  "name": "Aigerim Shalekenova",
+                  "text": "Experta en transporte aéreo y seguridad aeronáutica con más de 17 años en ingeniería, supervisión y asesoría estratégica en mercados globales.",
+                  "image": "assets/images/aigerim-shalekenova-.jpg",
+                  "link": "https://www.linkedin.com/",
+                  "linkText": "Ver perfil en LinkedIn"
+                },
+                {
+                  "name": "Dr. Charles E. Schlumberger",
+                  "text": "Especialista en transporte aéreo con más de 27 años en el Banco Mundial; experto en política aeronáutica, financiamiento de infraestructura y privatización.",
+                  "image": "assets/images/charles.jpeg"
+                },
+                {
+                  "name": "Andy Ricover",
+                  "text": "Especialista global en transporte aéreo con 31 años en economía, políticas, privatizaciones y PPP, asesorando gobiernos y bancos en más de 100 países.",
+                  "image": "assets/images/andy-ricover.jpg"
+                },
+                {
+                  "name": "Mark Lunsford",
+                  "text": "Consultor en aeropuertos con más de 30 años de experiencia global en estrategia, privatizaciones, planificación, operaciones y sostenibilidad.",
+                  "image": "assets/images/mark.jpeg"
+                },
+                {
+                  "name": "Sandy Belle Habchi",
+                  "text": "Experta global en transporte aéreo con más de 15 años en estrategia, finanzas e infraestructura, trabajando en más de 40 países.",
+                  "image": "assets/images/sandy.jpg"
+                },
+                {
+                  "name": "Ogaga Udjo",
+                  "text": "Especialista en política y regulación aeronáutica con más de 10 años asesorando en reformas, competencia y gobernanza del sector aéreo.",
+                  "image": "assets/images/ogaga.jpeg"
+                }
+              ]
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "contact": {
+          "title": "Contáctanos",
+          "description": "Contacto Grupo Integral Basilea para proyectos de agricultura, turismo y consultoría.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/contactanos_gib.png",
+            "title": "Contáctenos",
+            "subtitle": "Comunícate con nosotros."
+          },
+          "sections": [
+            {
+              "type": "contact",
+              "formTitle": "Contáctenos",
+              "infoTitle": "Información de contacto",
+              "emailLabel": "Correo electrónico",
+              "email": "info@grupobasilea.com",
+              "phoneLabel": "Teléfono",
+              "phoneLines": [
+                "Internacional: +1 (202) 640-1830",
+                "Guatemala: +502 5411-4460"
+              ],
+              "address": "Guatemala City, Guatemala",
+              "hoursTitle": "Horario",
+              "hoursStatus": "Abre hoy",
+              "hours": "09:00 a.m. – 05:00 p.m.",
+              "directions": "Consigue las instrucciones"
+            }
+          ]
+        }
+      }
+    },
+    "en": {
+      "meta": {
+        "siteName": "Grupo Integral Basilea"
+      },
+      "nav": {
+        "home": "Home",
+        "about": "About GIB",
+        "farm": "Finca Basilea",
+        "inn": "Posada Basilea",
+        "consulting": "Consulting",
+        "contact": "Contact",
+        "more": "More"
+      },
+      "common": {
+        "brandAlt": "Grupo Integral Basilea",
+        "learnMore": "Learn more",
+        "contactCtaTitle": "Explore opportunities with us",
+        "contactCtaText": "Contact us to explore collaboration opportunities.",
+        "contactCtaButton": "Contact us",
+        "socialTitle": "Connect with us"
+      },
+      "footer": {
+        "business": "Grupo Integral Basilea",
+        "location": "Guatemala City, Central America",
+        "international": "Intl:",
+        "guatemala": "GT:",
+        "copyright": "© 2026 Grupo Integral Basilea"
+      },
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send"
+      },
+      "pages": {
+        "home": {
+          "title": "Home",
+          "description": "Grupo Integral Basilea: agriculture, tourism, international consulting, and quality agricultural products.",
+          "hero": {
+            "variant": "video",
+            "media": "assets/videos/hero-video.mp4",
+            "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.png",
+            "eyebrow": "Grupo Integral Basilea",
+            "title": "Grupo Integral Basilea",
+            "subtitle": "We develop projects that connect agriculture, tourism, and international consulting",
+            "button": "Learn more about GIB",
+            "href": "/about"
+          },
+          "sections": [
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Posada Basilea",
+                  "label": "Inn",
+                  "text": "A seaside retreat on Amatique Bay, designed to enjoy the calm of the Guatemalan Caribbean.",
+                  "image": "assets/images/1_header.png",
+                  "href": "/inn"
+                },
+                {
+                  "title": "Finca Basilea",
+                  "label": "Farm",
+                  "text": "Livestock production and cacao cultivation in Izabal, developed under responsible management and productive quality principles.",
+                  "image": "assets/images/finca-basilea.png",
+                  "href": "/farm"
+                },
+                {
+                  "title": "International Consulting",
+                  "label": "Consulting",
+                  "text": "Strategic advisory for the development and modernization of air transport systems, logistics systems, and finance.",
+                  "image": "assets/images/banner_consultoria.jpg",
+                  "href": "/consulting"
+                }
+              ]
+            },
+            {
+              "type": "center",
+              "title": "An integrated vision",
+              "text": "We are a Guatemala-based company promoting projects across productive and service sectors, with a focus on specialized knowledge, responsibility, and sustainable value."
+            },
+            {
+              "type": "cta"
+            },
+            {
+              "type": "social"
+            }
+          ]
+        },
+        "about": {
+          "title": "About GIB",
+          "description": "Grupo Integral Basilea develops sustainable projects in agriculture, tourism, logistics, finance, and specialized consulting.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/banner_gib.png",
+            "title": "We build sustainable initiatives with a long-term vision."
+          },
+          "sections": [
+            {
+              "type": "textImage",
+              "title": "Our track record",
+              "image": "assets/images/5_foto-inferior.png",
+              "paragraphs": [
+                "GIB is a corporation established in Guatemala in 2014, dedicated to the development of real estate, agricultural, tourism, and specialized service projects.",
+                "Over the years, the company has developed initiatives aimed at creating sustainable value, promoting responsible practices and proper use of resources.",
+                "Today, GIB operates through five main branches: agricultural farm operations, tourism projects, international air transport consulting, logistics services, and financial management."
+              ]
+            },
+            {
+              "type": "center",
+              "title": "About Grupo Integral Basilea",
+              "text": "Grupo Integral Basilea brings together experience, investment, and operations in projects that seek to create sustainable value from Guatemala for national and international markets."
+            },
+            {
+              "type": "columns",
+              "items": [
+                {
+                  "title": "Our Vision",
+                  "text": "To be recognized for promoting responsible and sustainable projects that contribute to economic development and the responsible use of resources wherever we operate."
+                },
+                {
+                  "title": "Our Mission",
+                  "text": "To develop projects across productive and service sectors that generate sustainable value by combining specialized knowledge, responsibility, and a long-term vision."
+                }
+              ]
+            },
+            {
+              "type": "values",
+              "title": "Our Values",
+              "items": [
+                "Responsibility",
+                "Innovation",
+                "Sustainability",
+                "Commitment"
+              ]
+            },
+            {
+              "type": "banner",
+              "image": "assets/images/4_valores-cd939b3.jpg",
+              "title": "Commitment to sustainable development"
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "farm": {
+          "title": "Finca Basilea",
+          "description": "Finca Basilea: responsible agricultural production in Izabal, focused on livestock and cacao cultivation.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/finca-basilea.png",
+            "title": "Responsible agricultural production in Izabal"
+          },
+          "sections": [
+            {
+              "type": "textImage",
+              "title": "Finca Basilea",
+              "image": "assets/images/3_ganaderia.png",
+              "paragraphs": [
+                "In the heart of Izabal, near Entre Ríos, we operate Finca Basilea, an agricultural project focused on cattle raising and specialized agricultural products.",
+                "Our main activity is cattle development and improvement, including genetic lines and breeders, with the goal of producing healthy, strong cattle that allow us to offer premium-quality beef for the national market."
+              ]
+            },
+            {
+              "type": "featureGrid",
+              "items": [
+                {
+                  "title": "Livestock",
+                  "text": "Our cattle operation focuses on developing high-value genetic lines and continuously improving the herd.",
+                  "image": "assets/images/3_ganaderia.png"
+                },
+                {
+                  "title": "Responsible management",
+                  "text": "The farm prioritizes minimal use of chemical products and favors natural practices that strengthen the balance of the productive ecosystem.",
+                  "image": "assets/images/manejo_reponsable.png"
+                },
+                {
+                  "title": "Cacao",
+                  "text": "Since 2022, the project has also included cacao cultivation, with the goal of developing a high-quality product and moving toward a value chain that includes fermentation and drying.",
+                  "image": "assets/images/cacao.png"
+                }
+              ]
+            },
+            {
+              "type": "center",
+              "title": "Modern, responsible livestock production",
+              "text": "We seek to promote modern livestock production that combines productive efficiency with responsible practices. We produce natural beef from free-range cattle focused on animal welfare."
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "inn": {
+          "title": "Posada Basilea",
+          "description": "Discover Posada Basilea, a seaside retreat on Amatique Bay.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/1_header.png",
+            "title": "A seaside refuge"
+          },
+          "sections": [
+            {
+              "type": "textImage",
+              "title": "Posada Basilea",
+              "image": "assets/images/2022-11-26-13-16-48-pb260131.jpg",
+              "paragraphs": [
+                "Posada Basilea is located in Santa María del Mar, on Amatique Bay, one of the most attractive natural settings in the Guatemalan Caribbean.",
+                "The inn offers a restful space where visitors can enjoy nature, the sea, and the calm of the area."
+              ]
+            },
+            {
+              "type": "columns",
+              "items": [
+                {
+                  "title": "A space designed for rest",
+                  "text": "The inn has two fully equipped lodging units designed to provide comfort and privacy."
+                },
+                {
+                  "title": "Experiences to explore",
+                  "text": "The inn offers excursions to nearby destinations such as Livingston, Río Dulce, and the Castillo de San Felipe."
+                }
+              ]
+            },
+            {
+              "type": "featureGrid",
+              "items": [
+                {
+                  "title": "Private beach",
+                  "text": "Guests have access to a private beach, dock, and spaces to enjoy the natural surroundings.",
+                  "image": "assets/images/2.1_circulo-5755132.png"
+                },
+                {
+                  "title": "Seaside rest",
+                  "text": "A quiet environment to disconnect and experience the Guatemalan Caribbean.",
+                  "image": "assets/images/2.2_circulo-07de9e4.png"
+                },
+                {
+                  "title": "Reservations through Airbnb",
+                  "text": "Reservations are made through Airbnb. Check availability and make your booking.",
+                  "image": "assets/images/3_fotolink-aribnb-4a3f571.png",
+                  "button": "Reserve on Airbnb",
+                  "href": "https://www.airbnb.com/rooms/29795352?unique_share_id=2d42e30f-2aed-4d42-b144-f63effd7bfc4&viralityEntryPoint=1&s=76"
+                }
+              ]
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "consulting": {
+          "title": "Consulting",
+          "description": "Air transport and aviation consulting with international experts for sector development and sustainability.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/banner_consultoria.jpg",
+            "title": "International experience for an evolving sector"
+          },
+          "sections": [
+            {
+              "type": "center",
+              "title": "International Consulting",
+              "text": "We are a senior team of international air transport experts providing specialized consulting services for the development of air transport systems worldwide. Our approach supports strategic growth, modernization, and sustainability of aviation services and infrastructure."
+            },
+            {
+              "type": "featureGrid",
+              "items": [
+                {
+                  "title": "Strategy and modernization",
+                  "text": "Advisory services for strategic growth and modernization of air transport systems.",
+                  "image": "assets/images/servicios_gib.png"
+                },
+                {
+                  "title": "Infrastructure and financing",
+                  "text": "Experience in financing, development, and structuring of multilateral projects.",
+                  "image": "assets/images/airplane-wing-view-out-window.jpg"
+                },
+                {
+                  "title": "Sector sustainability",
+                  "text": "Technical support to strengthen aviation services and infrastructure with a sustainable vision.",
+                  "image": "assets/images/consultoria_gib.jpeg"
+                }
+              ]
+            },
+            {
+              "type": "center",
+              "title": "Global experience",
+              "text": "We are an international team with strong sector experience in every region of the world. For decades we have worked with leading international financial institutions, including the World Bank and the Inter-American Development Bank (IDB) in Washington, D.C., contributing deep knowledge in the development and financing of multilateral projects."
+            },
+            {
+              "type": "center",
+              "text": "To provide the best service to our global clients, our team successfully manages mandates in English, Spanish, Portuguese, French, German, Arabic, and Russian."
+            },
+            {
+              "type": "profiles",
+              "items": [
+                {
+                  "name": "Aigerim Shalekenova",
+                  "text": "Air transport and aviation safety expert with more than 17 years in engineering, oversight, and strategic advisory across global markets.",
+                  "image": "assets/images/aigerim-shalekenova-.jpg",
+                  "link": "https://www.linkedin.com/",
+                  "linkText": "View LinkedIn profile"
+                },
+                {
+                  "name": "Dr. Charles E. Schlumberger",
+                  "text": "Air transport specialist with more than 27 years at the World Bank; expert in aviation policy, infrastructure finance, and privatization.",
+                  "image": "assets/images/charles.jpeg"
+                },
+                {
+                  "name": "Andy Ricover",
+                  "text": "Global air transport specialist with 31 years in economics, policy, privatizations, and PPPs, advising governments and banks in more than 100 countries.",
+                  "image": "assets/images/andy-ricover.jpg"
+                },
+                {
+                  "name": "Mark Lunsford",
+                  "text": "Airport consultant with more than 30 years of global experience in strategy, privatizations, planning, operations, and sustainability.",
+                  "image": "assets/images/mark.jpeg"
+                },
+                {
+                  "name": "Sandy Belle Habchi",
+                  "text": "Global air transport expert with more than 15 years in strategy, finance, and infrastructure, working in more than 40 countries.",
+                  "image": "assets/images/sandy.jpg"
+                },
+                {
+                  "name": "Ogaga Udjo",
+                  "text": "Aviation policy and regulation specialist with more than 10 years advising on reforms, competition, and sector governance.",
+                  "image": "assets/images/ogaga.jpeg"
+                }
+              ]
+            },
+            {
+              "type": "cta"
+            }
+          ]
+        },
+        "contact": {
+          "title": "Contact",
+          "description": "Contact Grupo Integral Basilea for agriculture, tourism, and consulting projects.",
+          "hero": {
+            "variant": "image",
+            "media": "assets/images/contactanos_gib.png",
+            "title": "Contact us",
+            "subtitle": "Get in touch with us."
+          },
+          "sections": [
+            {
+              "type": "contact",
+              "formTitle": "Contact us",
+              "infoTitle": "Contact information",
+              "emailLabel": "Email",
+              "email": "info@grupobasilea.com",
+              "phoneLabel": "Phone",
+              "phoneLines": [
+                "International: +1 (202) 640-1830",
+                "Guatemala: +502 5411-4460"
+              ],
+              "address": "Guatemala City, Guatemala",
+              "hoursTitle": "Hours",
+              "hoursStatus": "Open today",
+              "hours": "09:00 a.m. – 05:00 p.m.",
+              "directions": "Get directions"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

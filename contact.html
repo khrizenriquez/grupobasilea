@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contáctanos | Grupo Integral Basilea</title>
+    <meta name="description" content="Contacto Grupo Integral Basilea">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+  </head>
+  <body data-page="contact">
+    <header class="site-header" data-site-header></header>
+    <main id="main-content" data-page-root></main>
+    <footer class="site-footer" data-site-footer></footer>
+
+    <form name="contact" method="POST" action="/success" data-netlify="true" data-netlify-honeypot="bot-field" netlify hidden>
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="bot-field">
+      <input type="text" name="name">
+      <input type="email" name="email">
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
