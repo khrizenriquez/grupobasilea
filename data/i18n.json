@@ -55,35 +55,43 @@
             "variant": "video",
             "media": "assets/videos/hero-video.mp4",
             "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.png",
-            "eyebrow": "Grupo Integral Basilea",
-            "title": "Grupo Integral Basilea",
-            "subtitle": "Desarrollamos proyectos que conectan agricultura, turismo y consultoría internacional",
-            "button": "Conocer más sobre GIB",
-            "href": "/about"
+            "title": "Grupo Integral Basilea"
           },
           "sections": [
             {
-              "type": "cards",
+              "type": "intro",
+              "title": "Desarrollamos proyectos que conectan agricultura, turismo y consultoría internacional",
+              "values": [
+                { "key": "experience", "label": "Experiencia" },
+                { "key": "vision", "label": "Visión de largo plazo" },
+                { "key": "sustainability", "label": "Sostenibilidad" },
+                { "key": "responsibility", "label": "Responsabilidad" }
+              ],
+              "button": "Conocer más sobre GIB",
+              "href": "/about"
+            },
+            {
+              "type": "featuresAlt",
               "items": [
                 {
                   "title": "Posada Basilea",
-                  "label": "Posada",
                   "text": "Un espacio de descanso frente al mar en la Bahía de Amatique, diseñado para disfrutar de la tranquilidad del Caribe guatemalteco.",
                   "image": "assets/images/1_header.png",
+                  "label": "Posada",
                   "href": "/inn"
                 },
                 {
                   "title": "Finca Basilea",
-                  "label": "Finca",
                   "text": "Producción ganadera y cultivo de cacao en Izabal, desarrollados bajo principios de manejo responsable y calidad productiva.",
                   "image": "assets/images/finca-basilea.png",
+                  "label": "Finca",
                   "href": "/farm"
                 },
                 {
                   "title": "Consultoría Internacional",
-                  "label": "Consultoría",
                   "text": "Asesoría estratégica para el desarrollo y modernización de sistemas de transporte aéreo, sistemas logísticos y finanzas.",
                   "image": "assets/images/banner_consultoria.jpg",
+                  "label": "Consultoría",
                   "href": "/consulting"
                 }
               ]
@@ -92,6 +100,10 @@
               "type": "center",
               "title": "Una visión integral",
               "text": "Somos una empresa con base en Guatemala que impulsa proyectos en distintos sectores productivos y de servicios, con un enfoque en conocimiento especializado, responsabilidad y valor sostenible."
+            },
+            {
+              "type": "imageBanner",
+              "image": "assets/images/airplane-wing-view-out-window.jpg"
             },
             {
               "type": "cta"
@@ -422,35 +434,43 @@
             "variant": "video",
             "media": "assets/videos/hero-video.mp4",
             "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.png",
-            "eyebrow": "Grupo Integral Basilea",
-            "title": "Grupo Integral Basilea",
-            "subtitle": "We develop projects that connect agriculture, tourism, and international consulting",
-            "button": "Learn more about GIB",
-            "href": "/about"
+            "title": "Grupo Integral Basilea"
           },
           "sections": [
             {
-              "type": "cards",
+              "type": "intro",
+              "title": "We develop projects connecting agriculture, tourism, and international consulting",
+              "values": [
+                { "key": "experience", "label": "Experience" },
+                { "key": "vision", "label": "Long-term vision" },
+                { "key": "sustainability", "label": "Sustainability" },
+                { "key": "responsibility", "label": "Responsibility" }
+              ],
+              "button": "Learn more about GIB",
+              "href": "/about"
+            },
+            {
+              "type": "featuresAlt",
               "items": [
                 {
                   "title": "Posada Basilea",
-                  "label": "Inn",
                   "text": "A seaside retreat on Amatique Bay, designed to enjoy the calm of the Guatemalan Caribbean.",
                   "image": "assets/images/1_header.png",
+                  "label": "Inn",
                   "href": "/inn"
                 },
                 {
                   "title": "Finca Basilea",
-                  "label": "Farm",
                   "text": "Livestock production and cacao cultivation in Izabal, developed under responsible management and productive quality principles.",
                   "image": "assets/images/finca-basilea.png",
+                  "label": "Farm",
                   "href": "/farm"
                 },
                 {
                   "title": "International Consulting",
-                  "label": "Consulting",
                   "text": "Strategic advisory for the development and modernization of air transport systems, logistics systems, and finance.",
                   "image": "assets/images/banner_consultoria.jpg",
+                  "label": "Consulting",
                   "href": "/consulting"
                 }
               ]
@@ -459,6 +479,10 @@
               "type": "center",
               "title": "An integrated vision",
               "text": "We are a Guatemala-based company promoting projects across productive and service sectors, with a focus on specialized knowledge, responsibility, and sustainable value."
+            },
+            {
+              "type": "imageBanner",
+              "image": "assets/images/airplane-wing-view-out-window.jpg"
             },
             {
               "type": "cta"

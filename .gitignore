@@ -1,6 +1,9 @@
 # Markdown work notes
 *.md
 
+# Site style reference docs (ignored — design documentation only)
+site-styles/
+
 # Netlify local state
 .netlify/
 

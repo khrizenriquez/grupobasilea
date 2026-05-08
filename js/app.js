@@ -19,6 +19,19 @@
     ["LinkedIn", "https://www.linkedin.com/#"]
   ];
 
+  const socialIcons = {
+    Facebook: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`,
+    Instagram: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`,
+    LinkedIn: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`
+  };
+
+  const introValueIcons = {
+    experience: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+    vision: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>`,
+    sustainability: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 8"/><path d="M12 22V12"/></svg>`,
+    responsibility: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`
+  };
+
   const pageKey = () => document.body.dataset.page || "home";
 
   const dictionary = () => state.config.translations[state.language];
@@ -140,7 +153,7 @@
     if (page.hero.eyebrow) content.appendChild(el("p", "eyebrow", page.hero.eyebrow));
     content.appendChild(el("h1", "", page.hero.title));
     if (page.hero.subtitle) content.appendChild(el("p", "hero__subtitle", page.hero.subtitle));
-    if (page.hero.button && page.hero.href) content.appendChild(link(page.hero.href, "button button--light", page.hero.button));
+    if (page.hero.button && page.hero.href) content.appendChild(link(page.hero.href, "button button--outline", page.hero.button));
     hero.appendChild(content);
 
     return hero;
@@ -257,6 +270,43 @@
     return section;
   };
 
+  const renderIntro = (sectionData) => {
+    const [section, inner] = sectionShell("section--intro");
+    inner.appendChild(el("h2", "", sectionData.title));
+    const valuesRow = el("div", "intro-values");
+    sectionData.values.forEach((v) => {
+      const item = el("div", "intro-value");
+      item.innerHTML = (introValueIcons[v.key] || "") + `<span>${v.label}</span>`;
+      valuesRow.appendChild(item);
+    });
+    inner.appendChild(valuesRow);
+    inner.appendChild(link(sectionData.href, "button", sectionData.button));
+    return section;
+  };
+
+  const renderFeaturesAlt = (sectionData) => {
+    const wrapper = document.createElement("section");
+    wrapper.className = "features-alt-section";
+    sectionData.items.forEach((item, i) => {
+      const row = el("div", `feature-row${i % 2 !== 0 ? " feature-row--reverse" : ""}`);
+      row.appendChild(image(item.image, item.title, "feature-row__image"));
+      const body = el("div", "feature-row__body");
+      body.appendChild(el("h2", "", item.title));
+      body.appendChild(el("p", "", item.text));
+      body.appendChild(link(item.href, "feature-row__btn", item.label));
+      row.appendChild(body);
+      wrapper.appendChild(row);
+    });
+    return wrapper;
+  };
+
+  const renderImageBanner = (sectionData) => {
+    const section = document.createElement("section");
+    section.className = "image-banner";
+    section.appendChild(image(sectionData.image, "", "image-banner__img"));
+    return section;
+  };
+
   const renderCta = () => {
     const t = dictionary();
     const [section, inner] = sectionShell("section--cta");
@@ -272,7 +322,10 @@
     inner.appendChild(el("h2", "", t.common.socialTitle));
     const list = el("div", "social-list");
     socialLinks.forEach(([label, href]) => {
-      list.appendChild(link(href, "social-link", label));
+      const a = link(href, "social-link", "");
+      a.setAttribute("aria-label", label);
+      a.innerHTML = socialIcons[label] || label;
+      list.appendChild(a);
     });
     inner.appendChild(list);
     return section;
@@ -330,6 +383,9 @@
 
   const renderSection = (sectionData) => {
     const renderers = {
+      intro: renderIntro,
+      featuresAlt: renderFeaturesAlt,
+      imageBanner: renderImageBanner,
       cards: renderCards,
       center: renderCenter,
       textImage: renderTextImage,
@@ -363,8 +419,9 @@
     const footer = document.querySelector("[data-site-footer]");
     footer.innerHTML = "";
 
-    footer.appendChild(el("p", "footer-business", t.footer.business));
-    footer.appendChild(el("p", "", t.footer.location));
+    const center = el("div", "footer-center");
+    center.appendChild(el("p", "footer-business", t.footer.business));
+    center.appendChild(el("p", "", t.footer.location));
 
     const phones = el("p", "footer-phones");
     phones.append(`${t.footer.international} `);
@@ -372,12 +429,15 @@
     phones.append("   ");
     phones.append(`${t.footer.guatemala} `);
     phones.appendChild(link("tel:+50254114460", "", "+502 5411-4460"));
-    footer.appendChild(phones);
+    center.appendChild(phones);
+    footer.appendChild(center);
 
-    const email = el("p", "");
-    email.appendChild(link("mailto:info@grupobasilea.com", "", "info@grupobasilea.com"));
-    footer.appendChild(email);
-    footer.appendChild(el("p", "", t.footer.copyright));
+    const bar = el("div", "footer-bar");
+    const emailP = el("p", "");
+    emailP.appendChild(link("mailto:info@grupobasilea.com", "footer-email", "info@grupobasilea.com"));
+    bar.appendChild(emailP);
+    bar.appendChild(el("p", "", t.footer.copyright));
+    footer.appendChild(bar);
   };
 
   const render = () => {
