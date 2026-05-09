@@ -5,12 +5,12 @@
   };
 
   const routes = [
-    ["home", "/"],
-    ["about", "/about.html"],
-    ["farm", "/farm.html"],
-    ["inn", "/inn.html"],
-    ["consulting", "/consulting.html"],
-    ["contact", "/contact.html"]
+    ["home", "./"],
+    ["about", "about.html"],
+    ["farm", "farm.html"],
+    ["inn", "inn.html"],
+    ["consulting", "consulting.html"],
+    ["contact", "contact.html"]
   ];
 
   const socialLinks = [
