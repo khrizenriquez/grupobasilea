@@ -116,7 +116,20 @@
     });
 
     nav.appendChild(languageSwitcher);
-    header.append(brand, toggle, nav);
+
+    // Mobile-only switcher — lives directly in the header bar (always visible)
+    const langMobile = el("div", "language-switcher language-switcher--mobile");
+    langMobile.setAttribute("aria-label", "Language selector");
+    state.config.languages.forEach((language) => {
+      const btn = el("button", "", language.shortLabel);
+      btn.type = "button";
+      btn.dataset.languageOption = language.code;
+      btn.setAttribute("aria-label", language.label);
+      btn.setAttribute("aria-pressed", String(language.code === state.language));
+      langMobile.appendChild(btn);
+    });
+
+    header.append(brand, toggle, langMobile, nav);
 
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
@@ -124,7 +137,7 @@
       nav.dataset.open = String(!isOpen);
     });
 
-    languageSwitcher.addEventListener("click", (event) => {
+    const onLangClick = (event) => {
       const button = event.target.closest("[data-language-option]");
       if (!button) return;
       const nextLanguage = button.dataset.languageOption;
@@ -133,7 +146,10 @@
         localStorage.setItem("gib_lang", nextLanguage);
         render();
       }
-    });
+    };
+
+    languageSwitcher.addEventListener("click", onLangClick);
+    langMobile.addEventListener("click", onLangClick);
   };
 
   const renderHero = (page) => {
