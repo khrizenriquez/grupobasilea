@@ -1,5 +1,6 @@
 # Markdown work notes
 *.md
+!README.md
 
 # Site style reference docs (ignored — design documentation only)
 site-styles/
