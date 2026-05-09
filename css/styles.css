@@ -129,6 +129,11 @@ video {
   margin-left: 6px;
 }
 
+/* Mobile header switcher — hidden on desktop */
+.language-switcher--mobile {
+  display: none;
+}
+
 .language-switcher button,
 .button,
 .contact-form button {
@@ -1429,6 +1434,21 @@ body[data-page="inn"] .footer-bar {
 
   .nav-toggle {
     display: inline-block;
+    order: 3;
+  }
+
+  .language-switcher--mobile {
+    display: inline-flex;
+    order: 2;
+    margin-left: 0;
+  }
+
+  .site-nav .language-switcher {
+    display: none;
+  }
+
+  .brand {
+    order: 1;
   }
 
   .site-nav {
