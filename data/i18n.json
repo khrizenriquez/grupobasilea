@@ -455,30 +455,40 @@
           "hero": {
             "variant": "image",
             "media": "assets/images/contactanos_gib.png",
-            "title": "Contáctenos",
-            "subtitle": "Comunícate con nosotros."
+            "title": "Contáctenos"
           },
           "sections": [
             {
               "type": "contact",
-              "formTitle": "Contáctenos",
+              "formTitle": "Comunícate con nosotros.",
+              "namePlaceholder": "Nombre",
+              "emailPlaceholder": "Correo electrónico*",
+              "messagePlaceholder": "Mensaje",
               "infoTitle": "Información de contacto",
               "emailLabel": "Correo electrónico",
               "email": "info@grupobasilea.com",
               "phoneLabel": "Teléfono",
-              "phoneLines": [
-                "Internacional: +1 (202) 640-1830",
-                "Guatemala: +502 5411-4460"
+              "phones": [
+                { "label": "Internacional:", "number": "+1 (202) 640-1830", "url": "tel:+12026401830" },
+                { "label": "Guatemala:", "number": "+502 5411-4460", "url": "tel:+50254114460" }
               ],
               "address": "Guatemala City, Guatemala",
               "hoursTitle": "Horario",
               "hoursStatus": "Abre hoy",
               "hours": "09:00 a.m. – 05:00 p.m.",
-              "directions": "Consigue las instrucciones"
+              "directions": "Consigue las instrucciones",
+              "directionsUrl": "https://maps.app.goo.gl/KyQMEwxLeMKrQsqs6"
+            },
+            {
+              "type": "map",
+              "lat": 14.6349,
+              "lng": -90.5069,
+              "zoom": 14,
+              "label": "Guatemala City, Guatemala"
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/baner-inferior.png"
+              "image": "assets/images/banner-contact.jpg"
             }
           ]
         }
@@ -926,30 +936,40 @@
           "hero": {
             "variant": "image",
             "media": "assets/images/contactanos_gib.png",
-            "title": "Contact us",
-            "subtitle": "Get in touch with us."
+            "title": "Contact Us"
           },
           "sections": [
             {
               "type": "contact",
-              "formTitle": "Contact us",
+              "formTitle": "Get in touch.",
+              "namePlaceholder": "Name",
+              "emailPlaceholder": "Email*",
+              "messagePlaceholder": "Message",
               "infoTitle": "Contact information",
               "emailLabel": "Email",
               "email": "info@grupobasilea.com",
               "phoneLabel": "Phone",
-              "phoneLines": [
-                "International: +1 (202) 640-1830",
-                "Guatemala: +502 5411-4460"
+              "phones": [
+                { "label": "International:", "number": "+1 (202) 640-1830", "url": "tel:+12026401830" },
+                { "label": "Guatemala:", "number": "+502 5411-4460", "url": "tel:+50254114460" }
               ],
               "address": "Guatemala City, Guatemala",
               "hoursTitle": "Hours",
               "hoursStatus": "Open today",
               "hours": "09:00 a.m. – 05:00 p.m.",
-              "directions": "Get directions"
+              "directions": "Get directions",
+              "directionsUrl": "https://maps.app.goo.gl/KyQMEwxLeMKrQsqs6"
+            },
+            {
+              "type": "map",
+              "lat": 14.6349,
+              "lng": -90.5069,
+              "zoom": 14,
+              "label": "Guatemala City, Guatemala"
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/baner-inferior.png"
+              "image": "assets/images/banner-contact.jpg"
             }
           ]
         }

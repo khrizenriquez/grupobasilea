@@ -130,6 +130,7 @@
       const nextLanguage = button.dataset.languageOption;
       if (state.config.translations[nextLanguage]) {
         state.language = nextLanguage;
+        localStorage.setItem("gib_lang", nextLanguage);
         render();
       }
     });
@@ -641,49 +642,129 @@
     const [section, inner] = sectionShell("section--contact");
     inner.classList.add("section__inner--split");
 
+    // --- Form card ---
     const formWrap = el("div", "contact-card");
-    formWrap.appendChild(el("h2", "", sectionData.formTitle));
+    formWrap.appendChild(el("h2", "contact-card__title", sectionData.formTitle));
     const form = el("form", "contact-form");
     form.name = "contact";
-    form.method = "POST";
-    form.action = "/success";
-    form.setAttribute("data-netlify", "true");
     form.setAttribute("data-netlify-honeypot", "bot-field");
+    form.addEventListener("submit", (e) => e.preventDefault());
+
+    const namePh = sectionData.namePlaceholder || t.form.name;
+    const emailPh = sectionData.emailPlaceholder || t.form.email + "*";
+    const msgPh = sectionData.messagePlaceholder || t.form.message;
+    const submitLabel = t.form.submit;
+
     form.innerHTML = `
       <input type="hidden" name="form-name" value="contact">
       <p class="visually-hidden">
         <label>Do not fill this out if you are human: <input name="bot-field"></label>
       </p>
-      <label>
-        <span>${t.form.name}</span>
-        <input type="text" name="name" autocomplete="name" required>
-      </label>
-      <label>
-        <span>${t.form.email}</span>
-        <input type="email" name="email" autocomplete="email" required>
-      </label>
-      <label>
-        <span>${t.form.message}</span>
-        <textarea name="message" rows="6" required></textarea>
-      </label>
-      <button type="submit">${t.form.submit}</button>
+      <div class="cf-field">
+        <input class="cf-input" type="text" name="name" placeholder="${namePh}" autocomplete="name">
+      </div>
+      <div class="cf-field">
+        <input class="cf-input" type="email" name="email" placeholder="${emailPh}" autocomplete="email" required>
+      </div>
+      <div class="cf-field">
+        <textarea class="cf-input cf-textarea" name="message" placeholder="${msgPh}" rows="7" required></textarea>
+      </div>
+      <button class="cf-submit" type="submit">${submitLabel.toUpperCase()}</button>
     `;
     formWrap.appendChild(form);
 
+    // --- Info card ---
     const info = el("aside", "contact-info");
-    info.appendChild(el("h2", "", sectionData.infoTitle));
-    info.appendChild(el("h3", "", sectionData.emailLabel));
-    info.appendChild(link(`mailto:${sectionData.email}`, "text-link", sectionData.email));
-    info.appendChild(el("h3", "", sectionData.phoneLabel));
-    sectionData.phoneLines.forEach((line) => info.appendChild(el("p", "", line)));
-    info.appendChild(el("p", "", sectionData.address));
-    info.appendChild(el("h3", "", sectionData.hoursTitle));
-    info.appendChild(el("p", "", sectionData.hoursStatus));
-    info.appendChild(el("p", "", sectionData.hours));
-    info.appendChild(el("p", "text-link", sectionData.directions));
+    info.appendChild(el("h2", "contact-info__title", sectionData.infoTitle));
+
+    const emailGroup = el("div", "contact-info__group");
+    emailGroup.appendChild(el("strong", "contact-info__label", sectionData.emailLabel));
+    emailGroup.appendChild(link(`mailto:${sectionData.email}`, "contact-info__link", sectionData.email));
+    info.appendChild(emailGroup);
+
+    const phoneGroup = el("div", "contact-info__group");
+    phoneGroup.appendChild(el("strong", "contact-info__label", sectionData.phoneLabel));
+    (sectionData.phones || []).forEach((ph) => {
+      const row = el("p", "contact-info__phone-row");
+      const lbl = el("span", "contact-info__phone-label", ph.label + " ");
+      const lnk = document.createElement("a");
+      lnk.className = "contact-info__link";
+      lnk.href = ph.url;
+      lnk.textContent = ph.number;
+      row.appendChild(lbl);
+      row.appendChild(lnk);
+      phoneGroup.appendChild(row);
+    });
+    info.appendChild(phoneGroup);
+
+    info.appendChild(el("p", "contact-info__address", sectionData.address));
+
+    const hoursGroup = el("div", "contact-info__group");
+    hoursGroup.appendChild(el("h3", "contact-info__hours-title", sectionData.hoursTitle));
+    const hoursRow = el("p", "contact-info__hours-row");
+    hoursRow.appendChild(el("span", "contact-info__hours-status", sectionData.hoursStatus + " "));
+    hoursRow.appendChild(el("span", "", sectionData.hours));
+    hoursGroup.appendChild(hoursRow);
+    info.appendChild(hoursGroup);
+
+    if (sectionData.directionsUrl) {
+      const dirLink = document.createElement("a");
+      dirLink.className = "contact-info__directions";
+      dirLink.href = sectionData.directionsUrl;
+      dirLink.target = "_blank";
+      dirLink.rel = "noopener";
+      dirLink.textContent = sectionData.directions;
+      info.appendChild(dirLink);
+    }
 
     inner.append(formWrap, info);
     return section;
+  };
+
+  const renderMap = (sectionData) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "contact-map";
+    wrapper.id = "contact-map";
+    wrapper.setAttribute("aria-label", sectionData.label || "Mapa");
+
+    // Inject Leaflet CSS once
+    if (!document.getElementById("leaflet-css")) {
+      const lnk = document.createElement("link");
+      lnk.id = "leaflet-css";
+      lnk.rel = "stylesheet";
+      lnk.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+      document.head.appendChild(lnk);
+    }
+
+    // Load Leaflet JS and init map after load
+    const initMap = () => {
+      if (!window.L) return;
+      const lat = sectionData.lat || 14.6349;
+      const lng = sectionData.lng || -90.5069;
+      const zoom = sectionData.zoom || 14;
+      const map = window.L.map("contact-map", { scrollWheelZoom: false }).setView([lat, lng], zoom);
+      window.L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      window.L.marker([lat, lng]).addTo(map).bindPopup(sectionData.label || "Grupo Integral Basilea");
+    };
+
+    if (window.L) {
+      // Already loaded (language switch)
+      requestAnimationFrame(initMap);
+    } else if (!document.getElementById("leaflet-js")) {
+      const script = document.createElement("script");
+      script.id = "leaflet-js";
+      script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+      script.onload = initMap;
+      document.head.appendChild(script);
+    } else {
+      // Script tag exists but not yet loaded — wait
+      document.getElementById("leaflet-js").addEventListener("load", initMap);
+    }
+
+    return wrapper;
   };
 
   const renderSection = (sectionData) => {
@@ -711,7 +792,8 @@
       innGallery: renderInnGallery,
       cta: renderCta,
       social: renderSocial,
-      contact: renderContact
+      contact: renderContact,
+      map: renderMap
     };
     return renderers[sectionData.type](sectionData);
   };
@@ -765,7 +847,8 @@
   const init = async () => {
     const response = await fetch("data/i18n.json?v=" + Date.now());
     state.config = await response.json();
-    state.language = state.config.defaultLanguage;
+    const saved = localStorage.getItem("gib_lang");
+    state.language = (saved && state.config.translations[saved]) ? saved : state.config.defaultLanguage;
     render();
   };
 
