@@ -1024,60 +1024,6 @@ h1 {
 }
 
 /* ---- Posada Basilea production clone ---- */
-.site-header--inn {
-  position: relative;
-  min-height: 110px;
-  padding: 24px 48px;
-}
-
-.site-header--inn .site-nav {
-  gap: 32px;
-  font-size: 14px;
-  letter-spacing: 0.071em;
-}
-
-.site-header--inn .site-nav a::after {
-  content: none;
-}
-
-.site-header--inn .site-nav a:hover {
-  color: rgb(198, 198, 198);
-}
-
-.site-header--inn .language-switcher {
-  gap: 22px;
-  margin-left: 0;
-}
-
-.site-header--inn .language-switcher button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: auto;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.071em;
-}
-
-.site-header--inn .language-switcher button::after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 6px solid currentColor;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  content: "";
-}
-
-.site-header--inn .language-switcher button[aria-pressed="true"] {
-  border-color: transparent;
-  background: transparent;
-  color: #fff;
-}
-
 .hero--inn {
   min-height: 1034px;
   background-position: center top;

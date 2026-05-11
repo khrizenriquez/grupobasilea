@@ -73,7 +73,6 @@
     const header = document.querySelector("[data-site-header]");
     const activePage = pageKey();
     header.innerHTML = "";
-    header.classList.toggle("site-header--inn", activePage === "inn");
 
     const brand = link("/", "brand", "");
     brand.setAttribute("aria-label", t.common.brandAlt);
@@ -90,24 +89,17 @@
     const nav = el("nav", "site-nav");
     nav.id = "site-nav";
 
-    if (activePage === "inn") {
-      nav.classList.add("site-nav--inn");
-      nav.appendChild(link("/", "", t.nav.home));
-    } else {
-      routes.forEach(([key, href]) => {
-        const navLink = link(href, "", t.nav[key]);
-        if (key === activePage) navLink.setAttribute("aria-current", "page");
-        nav.appendChild(navLink);
-      });
-    }
+    routes.forEach(([key, href]) => {
+      const navLink = link(href, "", t.nav[key]);
+      if (key === activePage) navLink.setAttribute("aria-current", "page");
+      nav.appendChild(navLink);
+    });
 
     const languageSwitcher = el("div", "language-switcher");
     languageSwitcher.setAttribute("aria-label", "Language selector");
-    if (activePage === "inn") languageSwitcher.classList.add("language-switcher--inn");
 
     state.config.languages.forEach((language) => {
-      const label = activePage === "inn" ? language.label : language.shortLabel;
-      const button = el("button", "", label);
+      const button = el("button", "", language.shortLabel);
       button.type = "button";
       button.dataset.languageOption = language.code;
       button.setAttribute("aria-label", language.label);
