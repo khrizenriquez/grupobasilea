@@ -841,6 +841,7 @@
       innDark: renderInnDark,
       innAirbnb: renderInnAirbnb,
       innGallery: renderInnGallery,
+      consultingGallery: renderInnGallery,
       cta: renderCta,
       social: renderSocial,
       contact: renderContact,
