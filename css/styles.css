@@ -1807,7 +1807,7 @@ body[data-page="inn"] .footer-bar {
   transition: box-shadow 0.3s ease;
 }
 .team-card {
-  cursor: default;
+  cursor: pointer;
   position: relative;
 }
 .team-card:hover .team-photo-wrap {
@@ -1832,12 +1832,13 @@ body[data-page="inn"] .footer-bar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 14px;
   padding: 28px 24px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 2;
+  overflow-y: auto;
 }
 .team-card:hover .team-photo-overlay,
 .team-card:focus-within .team-photo-overlay {
@@ -1850,10 +1851,6 @@ body[data-page="inn"] .footer-bar {
   line-height: 1.55;
   text-align: center;
   margin: 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
 }
 .team-overlay__link {
   display: inline-flex;
@@ -1874,6 +1871,30 @@ body[data-page="inn"] .footer-bar {
 .team-overlay__link:hover,
 .team-overlay__link:focus-visible {
   background: #f5d93e;
+  outline: none;
+}
+.team-overlay__more {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 18px;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+.team-overlay__more:hover,
+.team-overlay__more:focus-visible {
+  border-color: #fff;
+  color: #edcd2a;
   outline: none;
 }
 
@@ -2043,11 +2064,11 @@ body.team-modal-open { overflow: hidden; }
   .team-modal__content { padding: 20px 24px 24px; }
 }
 @media (max-width: 720px) {
-  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; row-gap: 28px; }
-  .team-card { max-width: 100%; }
-  .team-name { font-size: 16px; }
-  .team-more-btn { min-width: 0; width: 100%; min-height: 44px; font-size: 10px; letter-spacing: 0.6px; padding: 8px 10px; }
-  .team-overlay__text { font-size: 10px; -webkit-line-clamp: 4; }
+  .team-grid { grid-template-columns: 1fr; row-gap: 32px; }
+  .team-card { max-width: 360px; }
+  .team-name { font-size: 18px; }
+  .team-more-btn { min-width: 0; width: 100%; min-height: 44px; font-size: 11px; letter-spacing: 0.6px; padding: 8px 10px; }
+  .team-overlay__text { font-size: 11px; }
 }
 @media (max-width: 640px) {
   .consultoria-item h4 { font-size: 20px; }

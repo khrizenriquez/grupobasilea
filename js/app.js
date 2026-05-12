@@ -433,8 +433,15 @@
       overlayLink.rel = "noopener";
       overlayLink.setAttribute("aria-label", item.linkText);
       overlayLink.textContent = "Ver perfil";
+      const overlayMore = document.createElement("button");
+      overlayMore.className = "team-overlay__more";
+      overlayMore.type = "button";
+      overlayMore.setAttribute("aria-label", "Abrir perfil de " + item.name);
+      overlayMore.dataset.openProfile = profileId;
+      overlayMore.textContent = "Ver más";
       overlay.appendChild(overlayText);
       overlay.appendChild(overlayLink);
+      overlay.appendChild(overlayMore);
 
       card.appendChild(photoWrap);
       card.appendChild(nameEl);
