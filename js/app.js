@@ -76,7 +76,7 @@
 
     const brand = link("/", "brand", "");
     brand.setAttribute("aria-label", t.common.brandAlt);
-    const logo = image("assets/images/blob-c3288c8.png", t.common.brandAlt, "brand__logo");
+    const logo = image("assets/images/blob-c3288c8.webp", t.common.brandAlt, "brand__logo");
     brand.appendChild(logo);
 
     const toggle = el("button", "nav-toggle");
