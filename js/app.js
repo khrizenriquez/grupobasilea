@@ -6,11 +6,11 @@
 
   const routes = [
     ["home", "/"],
-    ["about", "/about.html"],
-    ["farm", "/farm.html"],
-    ["inn", "/inn.html"],
-    ["consulting", "/consulting.html"],
-    ["contact", "/contact.html"]
+    ["about", "/about"],
+    ["farm", "/farm"],
+    ["inn", "/inn"],
+    ["consulting", "/consulting"],
+    ["contact", "/contact"]
   ];
 
   const socialLinks = [
@@ -76,7 +76,7 @@
 
     const brand = link("/", "brand", "");
     brand.setAttribute("aria-label", t.common.brandAlt);
-    const logo = image("assets/images/blob-c3288c8.png", t.common.brandAlt, "brand__logo");
+    const logo = image("assets/images/blob-c3288c8.webp", t.common.brandAlt, "brand__logo");
     brand.appendChild(logo);
 
     const toggle = el("button", "nav-toggle");
