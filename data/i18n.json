@@ -54,7 +54,7 @@
           "hero": {
             "variant": "video",
             "media": "assets/videos/hero-video.mp4",
-            "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.png",
+            "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.webp",
             "title": "Grupo Integral Basilea"
           },
           "sections": [
@@ -102,7 +102,7 @@
                 {
                   "title": "Consultoría Internacional",
                   "text": "Asesoría estratégica para el desarrollo y modernización de sistemas de transporte aéreo, sistemas logísticos y finanzas.",
-                  "image": "assets/images/banner_consultoria.jpg",
+                  "image": "assets/images/banner_consultoria.webp",
                   "label": "Consultoría",
                   "href": "/consulting"
                 }
@@ -115,7 +115,7 @@
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/airplane-wing-view-out-window.jpg"
+              "image": "assets/images/airplane-wing-view-out-window.webp"
             },
             {
               "type": "cta"
@@ -137,7 +137,7 @@
             {
               "type": "textImage",
               "title": "Nuestra trayectoria",
-              "image": "assets/images/charles.jpeg",
+              "image": "assets/images/charles.webp",
               "paragraphs": [
                 "GIB es una sociedad anónima constituida en Guatemala en 2014, dedicada al desarrollo de proyectos inmobiliarios, agropecuarios, turísticos y de servicios especializados.",
                 "A lo largo de los años, la empresa ha desarrollado distintas iniciativas orientadas a generar valor sostenible, promoviendo prácticas responsables y el uso adecuado de los recursos.",
@@ -164,19 +164,19 @@
               "items": [
                 {
                   "label": "Innovación",
-                  "image": "assets/images/iconos-06.png"
+                  "image": "assets/images/iconos-06.webp"
                 },
                 {
                   "label": "Compromiso",
-                  "image": "assets/images/iconos-08.png"
+                  "image": "assets/images/iconos-08.webp"
                 },
                 {
                   "label": "Responsabilidad",
-                  "image": "assets/images/iconos-05.png"
+                  "image": "assets/images/iconos-05.webp"
                 },
                 {
                   "label": "Sostenibilidad",
-                  "image": "assets/images/iconos-07.png"
+                  "image": "assets/images/iconos-07.webp"
                 }
               ]
             },
@@ -190,7 +190,7 @@
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/4_valores-cd939b3.jpg"
+              "image": "assets/images/4_valores-cd939b3.webp"
             }
           ]
         },
@@ -228,7 +228,7 @@
                   "paragraphs": [
                     "La finca prioriza el uso mínimo de productos químicos y favorece prácticas naturales que fortalecen el equilibrio del ecosistema productivo."
                   ],
-                  "image": "assets/images/manejo_reponsable.png"
+                  "image": "assets/images/manejo_reponsable.webp"
                 },
                 {
                   "title": "Cacao",
@@ -259,7 +259,7 @@
           "sections": [
             {
               "type": "innIntro",
-              "image": "assets/images/2022-11-26-13-16-48-pb260131.jpg",
+              "image": "assets/images/2022-11-26-13-16-48-pb260131.webp",
               "paragraphs": [
                 "Posada Basilea se encuentra en Santa María del Mar, en la Bahía de Amatique, uno de los entornos naturales más atractivos del Caribe guatemalteco.",
                 "La posada busca ofrecer un espacio de descanso donde los visitantes puedan disfrutar de la naturaleza, el mar y la tranquilidad del lugar."
@@ -277,7 +277,7 @@
               "type": "innCircles",
               "items": [
                 {
-                  "image": "assets/images/2.1_circulo-5755132.png",
+                  "image": "assets/images/2.1_circulo-5755132.webp",
                   "alt": ""
                 },
                 {
@@ -285,7 +285,7 @@
                   "alt": ""
                 },
                 {
-                  "image": "assets/images/2.3_circulo-3cf7474.png",
+                  "image": "assets/images/2.3_circulo-3cf7474.webp",
                   "alt": ""
                 }
               ]
@@ -298,7 +298,7 @@
             {
               "type": "innAirbnb",
               "title": "Las reservaciones se realizan a través de Airbnb. Consulte disponibilidad y haga su reserva.",
-              "image": "assets/images/3_fotolink-aribnb-4a3f571.png",
+              "image": "assets/images/3_fotolink-aribnb-4a3f571.webp",
               "button": "Reservar en Airbnb",
               "href": "https://www.airbnb.com/rooms/29795352?unique_share_id=2d42e30f-2aed-4d42-b144-f63effd7bfc4&viralityEntryPoint=1&s=76"
             },
@@ -306,8 +306,8 @@
               "type": "innGallery",
               "images": [
                 "assets/images/1_header.png",
-                "assets/images/3_fotolink-aribnb-4a3f571.png",
-                "assets/images/2022-11-26-13-16-48-pb260131.jpg"
+                "assets/images/3_fotolink-aribnb-4a3f571.webp",
+                "assets/images/2022-11-26-13-16-48-pb260131.webp"
               ]
             },
             {
@@ -315,7 +315,7 @@
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/mesmerizing-shot-crystal-blue-ocean-waves-v2.jpg"
+              "image": "assets/images/mesmerizing-shot-crystal-blue-ocean-waves-v2.webp"
             }
           ]
         },
@@ -324,7 +324,7 @@
           "description": "Consultoría de transporte aéreo y aviación con expertos internacionales para el desarrollo y sostenibilidad del sector.",
           "hero": {
             "variant": "image",
-            "media": "assets/images/banner_consultoria.jpg",
+            "media": "assets/images/banner_consultoria.webp",
             "title": "Experiencia internacional para un sector en evolución"
           },
           "sections": [
@@ -336,7 +336,7 @@
             {
               "type": "servicesList",
               "title": "Nuestros servicios de consultoría abarcan desde",
-              "image": "assets/images/consultoria_gib.jpeg",
+              "image": "assets/images/consultoria_gib.webp",
               "items": [
                 {
                   "title": "Cuestiones políticas y regulatorias",
@@ -393,7 +393,7 @@
                 {
                   "name": "Andy Ricover",
                   "text": "Andy Ricover, BA, MBA — Especialista global en transporte aéreo con 31 años de experiencia en economía de la aviación, políticas, privatizaciones, PPP y valoración; asesor de bancos multilaterales y gobiernos en 106 países.",
-                  "image": "assets/images/andy-ricover.jpg",
+                  "image": "assets/images/andy-ricover.webp",
                   "link": "https://www.linkedin.com/in/andy-ricover-1001a1136",
                   "linkText": "Ver perfil en LinkedIn",
                   "fullText": "Andy Ricover, BA en Economía, MBA aporta 31 años de experiencia en economía de la aviación, privatizaciones, políticas de transporte aéreo, previsión de tráfico, regulación, due diligence y valoración. Ha trabajado en más de 340 proyectos en 106 países para gobiernos, operadores, consorcios licitantes, despachos jurídicos y bancos de desarrollo, y ha sido especialista sénior en transporte aéreo del Grupo Banco Mundial y del Banco Interamericano de Desarrollo. Andy ha diseñado políticas nacionales de aviación para más de 30 Estados, asesorado en numerosos procesos de PPP para aeropuertos y aerolíneas, y actuado como perito en arbitrajes internacionales. Habla español, inglés y portugués, y tiene conocimientos de francés e italiano."
@@ -401,7 +401,7 @@
                 {
                   "name": "Dr. Charles E. Schlumberger",
                   "text": "Dr. Charles E. Schlumberger — Especialista principal en transporte aéreo — Nacional suizo; especialista en transporte aéreo con más de 27 años en el Banco Mundial; experto en política aeronáutica, financiación de infraestructuras, reestructuración y privatización.",
-                  "image": "assets/images/charles.jpeg",
+                  "image": "assets/images/charles.webp",
                   "link": "https://www.linkedin.com/in/charles-schlumberger-1653174",
                   "linkText": "Ver perfil en LinkedIn",
                   "fullText": "Dr. Charles E. Schlumberger es un profesional suizo que prestó servicio más de 27 años en el Banco Mundial en Washington D.C. como Especialista principal en transporte aéreo, responsable de las prioridades de política y desarrollo del Banco en transporte aéreo. Ha supervisado y participado en proyectos globales que abarcan financiación de infraestructuras aeroportuarias y de transporte aéreo, reestructuración y privatización de aerolíneas, programas de seguridad y protección, y asesoría de políticas para gobiernos. Antes de su nombramiento en el Banco Mundial en 1998, fue Vicepresidente en Union Bank of Switzerland (UBS), responsable de reestructuración de créditos internacionales; anteriormente fue director ejecutivo de un grupo de logística y transporte en Francia y ejerció como abogado especializado en asuntos aeronáuticos en Suiza. Obtuvo su título en Derecho en la Universidad de Basilea (1986), con especialización en derecho aeronáutico y procedimientos concursales; posee un MBA de Harvard Business School y un Doctorado en Derecho Civil del Institute of Air and Space Law de la Universidad McGill. Es piloto con licencias FAA y EASA e instructor de vuelo certificado, Miembro (Fellow) de la Royal Aeronautical Society, y habla con fluidez inglés, francés, alemán, sueco y español."
@@ -409,7 +409,7 @@
                 {
                   "name": "Mark Lunsford",
                   "text": "Mark Lunsford, B.S., M.S. — Consultor en aeropuertos y transporte aéreo con más de 30 años de experiencia global en estrategia, privatizaciones, planificación maestra, operaciones, resiliencia y sostenibilidad; fundador y principal de Appian Way Consulting.",
-                  "image": "assets/images/mark.jpeg",
+                  "image": "assets/images/mark.webp",
                   "link": "https://www.linkedin.com/in/mark-lunsford-8187a611",
                   "linkText": "Ver perfil en LinkedIn",
                   "fullText": "Mark Lunsford, B.S., M.S. aporta más de 30 años de experiencia internacional en consultoría aeroportuaria y de transporte aéreo, abarcando estrategia, planificación empresarial y financiera, asesoría en privatizaciones y transacciones, planificación maestra, operaciones, seguridad, resiliencia ante desastres y sostenibilidad. Es fundador y director de Appian Way Consulting y ha asesorado al Banco Mundial, a la IFC, a gobiernos nacionales, autoridades aeroportuarias, aerolíneas e inversores privados en Norte, Centro y Sudamérica, el Caribe, Europa, Oriente Medio, el sur de Asia y el sudeste asiático. Lideró importantes procesos de privatización y transacción —incluida la concesión de cinco aeropuertos brasileños— gestionó el plan maestro del aeropuerto Dallas/Fort Worth y dirigió proyectos destacados para la TSA que recibieron un premio del Departamento de Seguridad Nacional. Antes de fundar Appian Way en 2015, trabajó más de 20 años en LeighFisher, donde llegó a ser Presidente. Posee un B.S. en Ingeniería Civil, summa cum laude (Virginia Tech) y un M.S. en Ingeniería Civil (Transporte, UC Berkeley)."
@@ -417,7 +417,7 @@
                 {
                   "name": "Aigerim Shalekenova",
                   "text": "Aigerim Shalekenova — Experta en transporte aéreo y seguridad aeronáutica con más de 17 años en ingeniería aeronáutica, supervisión de seguridad y asesoría estratégica; ofrece soluciones prácticas y financiables en mercados globales y emergentes.",
-                  "image": "assets/images/aigerim-shalekenova-.jpg",
+                  "image": "assets/images/aigerim-shalekenova-.webp",
                   "link": "https://www.linkedin.com/in/aigerim-shalekenova-92a6aa43",
                   "linkText": "Ver perfil en LinkedIn",
                   "fullText": "Aigerim Shalekenova — Experta en transporte aéreo y seguridad aeronáutica aporta más de 17 años de experiencia integral en ingeniería de aeronaves, ejecución operativa, supervisión regulatoria y asesoría estratégica. Combina experiencia operativa —liderando adquisiciones y redeliveries de aeronaves, programas de mantenimiento mayor y estrategias de transición de flota en Europa, Norteamérica, Asia y mercados emergentes— con liderazgo regulatorio: como Directora de Aeronavegabilidad en la Administración de Aviación de Kazajistán creó la inspectoría nacional, reclutó y formó inspectores, desarrolló procedimientos y alineó sistemas con normas ICAO, contribuyendo a mejoras sostenidas en USOAP (86.5%). En su rol como consultora experta en transporte aéreo para el Banco Mundial asesora en reforma sectorial, fortalecimiento de supervisión de seguridad, modernización aeroportuaria y de navegación aérea, resiliencia climática y planificación de inversiones, siempre orientada a recomendaciones implementables y financiables. Ha trabajado en la EE. UU., China, Reino Unido, UE, Brasil, Indonesia, Asia Central y el Caribe, y es valorada por su rigor técnico, comprensión institucional y enfoque en la ejecución. Habla inglés, kazajo y ruso."
@@ -425,7 +425,7 @@
                 {
                   "name": "Ogaga Udjo",
                   "text": "Ogaga Udjo — Experto global en transporte aéreo con más de 15 años en gestión aérea, asesoría privada y financiación para el desarrollo; fundador de Logics Advisory; experiencia en 40+ países.",
-                  "image": "assets/images/ogaga.jpeg",
+                  "image": "assets/images/ogaga.webp",
                   "link": "https://www.linkedin.com/in/ogagaudjo",
                   "linkText": "Ver perfil en LinkedIn",
                   "fullText": "Ogaga Udjo — Experto global en transporte aéreo | Infraestructura | Estrategia y Finanzas — aporta más de 15 años de experiencia internacional en gestión de aerolíneas, asesoría privada y financiación para el desarrollo, con foco en mercados emergentes y fronterizos. Con raíces en Pretoria y con base en Washington, D.C., opera en la intersección de las realidades del mercado aéreo del Sur y del Norte global, la política, el capital y las instituciones. A través de su práctica privada, Logics Advisory (Sudáfrica), ha liderado asesorías en desarrollo de servicios aéreos, estrategia corporativa y de políticas —incluyendo la dirección de un proceso emblemático de privatización de un grupo aéreo— así como desarrollos aeroportuarios, estrategias comerciales y de red, y actuaciones aeropolíticas. En calidad de asesor para el Banco Mundial, apoya operaciones y asesorías en una cartera de transporte aéreo superior a $1.000 M, que abarca reforma sectorial, conectividad regional e integración, habilitación de PPP y comercialización de SAF (combustibles sostenibles de aviación). Sus orígenes en la industria incluyen roles senior en planificación de red, estrategia y liderazgo en Qatar Airways, Comair (franquicia British Airways) y South African Airways. Con un enfoque basado en datos y centrado en las partes interesadas, ha logrado resultados exitosos en más de 40 países. Es ponente reconocido y colaborador en medios; posee maestrías en Negocios Internacionales y Estrategia (Sudáfrica) y en Finanzas (Estados Unidos)."
@@ -433,7 +433,7 @@
                 {
                   "name": "Sandy Belle Habchi",
                   "text": "Sandy Belle Habchi — Especialista en política y regulación aeronáutica con más de 10 años asesorando a gobiernos e instituciones internacionales en reforma del sector aéreo, marcos de competencia y gobernanza de infraestructuras.",
-                  "image": "assets/images/sandy.jpg",
+                  "image": "assets/images/sandy.webp",
                   "link": "https://www.linkedin.com/in/sandy-belle-habchi-5155235a",
                   "linkText": "Ver perfil en LinkedIn",
                   "fullText": "Sandy Belle Habchi aporta más de diez años de experiencia especializada en política y regulación aeronáutica, asesorando a gobiernos e instituciones internacionales en reforma del transporte aéreo, marcos de competencia y gobernanza de infraestructuras. Como consultora del Banco Mundial ha liderado diagnósticos del sector aéreo, programas de reforma regulatoria y estrategias de liberalización de mercados, con énfasis en política de competencia, regulación económica aeroportuaria, gobernanza institucional y diseño de marcos regulatorios que mejoran la eficiencia, la transparencia y la supervisión del mercado. Su trabajo regional abarca Oriente Medio, África y Asia e incluye benchmarking regulatorio, evaluaciones de gobernanza aeroportuaria y marcos de asociación público-privada, así como el análisis de competencia y regulación que apoyó la reestructuración del sector aéreo en Arabia Saudita. Inició su carrera en el Institute of Air and Space Law de la Universidad McGill, contribuyendo a investigaciones y publicaciones internacionales en derecho aeronáutico y espacial. Posee un LL.M. en Derecho Aeronáutico y Espacial por McGill (Boeing Fellowship; Masao Sekiguchi Fellowship) y un LL.B. por la University of Nicosia. Habla inglés, árabe y griego (chipriota)."
@@ -454,7 +454,7 @@
           "description": "Contacto Grupo Integral Basilea para proyectos de agricultura, turismo y consultoría.",
           "hero": {
             "variant": "image",
-            "media": "assets/images/contactanos_gib.png",
+            "media": "assets/images/contactanos_gib.webp",
             "title": "Contáctenos"
           },
           "sections": [
@@ -535,7 +535,7 @@
           "hero": {
             "variant": "video",
             "media": "assets/videos/hero-video.mp4",
-            "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.png",
+            "poster": "assets/images/thumbnail-d8208957-f77f-4e1f-b564-49caf48c4bd2.webp",
             "title": "Grupo Integral Basilea"
           },
           "sections": [
@@ -583,7 +583,7 @@
                 {
                   "title": "International Consulting",
                   "text": "Strategic advisory for the development and modernization of air transport systems, logistics systems, and finance.",
-                  "image": "assets/images/banner_consultoria.jpg",
+                  "image": "assets/images/banner_consultoria.webp",
                   "label": "Consulting",
                   "href": "/consulting"
                 }
@@ -596,7 +596,7 @@
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/airplane-wing-view-out-window.jpg"
+              "image": "assets/images/airplane-wing-view-out-window.webp"
             },
             {
               "type": "cta"
@@ -618,7 +618,7 @@
             {
               "type": "textImage",
               "title": "Our track record",
-              "image": "assets/images/charles.jpeg",
+              "image": "assets/images/charles.webp",
               "paragraphs": [
                 "GIB is a corporation established in Guatemala in 2014, dedicated to the development of real estate, agricultural, tourism, and specialized service projects.",
                 "Over the years, the company has developed initiatives aimed at creating sustainable value, promoting responsible practices and proper use of resources.",
@@ -645,19 +645,19 @@
               "items": [
                 {
                   "label": "Innovation",
-                  "image": "assets/images/iconos-06.png"
+                  "image": "assets/images/iconos-06.webp"
                 },
                 {
                   "label": "Commitment",
-                  "image": "assets/images/iconos-08.png"
+                  "image": "assets/images/iconos-08.webp"
                 },
                 {
                   "label": "Responsibility",
-                  "image": "assets/images/iconos-05.png"
+                  "image": "assets/images/iconos-05.webp"
                 },
                 {
                   "label": "Sustainability",
-                  "image": "assets/images/iconos-07.png"
+                  "image": "assets/images/iconos-07.webp"
                 }
               ]
             },
@@ -671,7 +671,7 @@
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/4_valores-cd939b3.jpg"
+              "image": "assets/images/4_valores-cd939b3.webp"
             }
           ]
         },
@@ -709,7 +709,7 @@
                   "paragraphs": [
                     "The farm prioritizes minimal use of chemical products and favors natural practices that strengthen the balance of the productive ecosystem."
                   ],
-                  "image": "assets/images/manejo_reponsable.png"
+                  "image": "assets/images/manejo_reponsable.webp"
                 },
                 {
                   "title": "Cacao",
@@ -740,7 +740,7 @@
           "sections": [
             {
               "type": "innIntro",
-              "image": "assets/images/2022-11-26-13-16-48-pb260131.jpg",
+              "image": "assets/images/2022-11-26-13-16-48-pb260131.webp",
               "paragraphs": [
                 "Posada Basilea is located in Santa María del Mar, on Amatique Bay, one of the most attractive natural settings in the Guatemalan Caribbean.",
                 "The inn offers a restful space where visitors can enjoy nature, the sea, and the calm of the area."
@@ -758,7 +758,7 @@
               "type": "innCircles",
               "items": [
                 {
-                  "image": "assets/images/2.1_circulo-5755132.png",
+                  "image": "assets/images/2.1_circulo-5755132.webp",
                   "alt": ""
                 },
                 {
@@ -766,7 +766,7 @@
                   "alt": ""
                 },
                 {
-                  "image": "assets/images/2.3_circulo-3cf7474.png",
+                  "image": "assets/images/2.3_circulo-3cf7474.webp",
                   "alt": ""
                 }
               ]
@@ -779,7 +779,7 @@
             {
               "type": "innAirbnb",
               "title": "Reservations are made through Airbnb. Check availability and make your booking.",
-              "image": "assets/images/3_fotolink-aribnb-4a3f571.png",
+              "image": "assets/images/3_fotolink-aribnb-4a3f571.webp",
               "button": "Reserve on Airbnb",
               "href": "https://www.airbnb.com/rooms/29795352?unique_share_id=2d42e30f-2aed-4d42-b144-f63effd7bfc4&viralityEntryPoint=1&s=76"
             },
@@ -787,8 +787,8 @@
               "type": "innGallery",
               "images": [
                 "assets/images/1_header.png",
-                "assets/images/3_fotolink-aribnb-4a3f571.png",
-                "assets/images/2022-11-26-13-16-48-pb260131.jpg"
+                "assets/images/3_fotolink-aribnb-4a3f571.webp",
+                "assets/images/2022-11-26-13-16-48-pb260131.webp"
               ]
             },
             {
@@ -796,7 +796,7 @@
             },
             {
               "type": "imageBanner",
-              "image": "assets/images/mesmerizing-shot-crystal-blue-ocean-waves-v2.jpg"
+              "image": "assets/images/mesmerizing-shot-crystal-blue-ocean-waves-v2.webp"
             }
           ]
         },
@@ -805,7 +805,7 @@
           "description": "Air transport and aviation consulting with international experts for sector development and sustainability.",
           "hero": {
             "variant": "image",
-            "media": "assets/images/banner_consultoria.jpg",
+            "media": "assets/images/banner_consultoria.webp",
             "title": "International experience for an evolving sector"
           },
           "sections": [
@@ -817,7 +817,7 @@
             {
               "type": "servicesList",
               "title": "Our consulting services cover",
-              "image": "assets/images/consultoria_gib.jpeg",
+              "image": "assets/images/consultoria_gib.webp",
               "items": [
                 {
                   "title": "Policy and regulatory matters",
@@ -874,7 +874,7 @@
                 {
                   "name": "Andy Ricover",
                   "text": "Andy Ricover, BA, MBA — Global air transport specialist with 31 years of experience in aviation economics, policy, privatizations, PPPs, and valuation; advisor to multilateral banks and governments in 106 countries.",
-                  "image": "assets/images/andy-ricover.jpg",
+                  "image": "assets/images/andy-ricover.webp",
                   "link": "https://www.linkedin.com/in/andy-ricover-1001a1136",
                   "linkText": "View LinkedIn profile",
                   "fullText": "Andy Ricover, BA in Economics, MBA brings 31 years of experience in aviation economics, privatizations, air transport policies, traffic forecasting, regulation, due diligence and valuation. He has worked on more than 340 projects in 106 countries for governments, operators, bidding consortia, law firms and development banks, and has been a senior air transport specialist at the World Bank Group and the Inter-American Development Bank. Andy has designed national aviation policies for more than 30 states, advised on numerous PPP processes for airports and airlines, and acted as an expert witness in international arbitrations. He speaks Spanish, English and Portuguese, and has knowledge of French and Italian."
@@ -882,7 +882,7 @@
                 {
                   "name": "Dr. Charles E. Schlumberger",
                   "text": "Dr. Charles E. Schlumberger — Lead air transport specialist — Swiss national; air transport specialist with more than 27 years at the World Bank; expert in aviation policy, infrastructure financing, restructuring, and privatization.",
-                  "image": "assets/images/charles.jpeg",
+                  "image": "assets/images/charles.webp",
                   "link": "https://www.linkedin.com/in/charles-schlumberger-1653174",
                   "linkText": "View LinkedIn profile",
                   "fullText": "Dr. Charles E. Schlumberger is a Swiss professional who served for more than 27 years at the World Bank in Washington D.C. as Lead Air Transport Specialist, responsible for the Bank's policy and development priorities in air transport. He has supervised and participated in global projects covering airport and air transport infrastructure financing, airline restructuring and privatization, safety and security programs, and policy advisory for governments. Before his World Bank appointment in 1998, he was Vice President at Union Bank of Switzerland (UBS), responsible for international credit restructuring; previously he was executive director of a logistics and transport group in France and practiced as a lawyer specializing in aeronautical matters in Switzerland. He holds a law degree from the University of Basel (1986), specializing in aeronautical law and insolvency proceedings; has an MBA from Harvard Business School and a Doctorate in Civil Law from the Institute of Air and Space Law at McGill University. He is a pilot with FAA and EASA licenses and a certified flight instructor, a Fellow of the Royal Aeronautical Society, and is fluent in English, French, German, Swedish and Spanish."
@@ -890,7 +890,7 @@
                 {
                   "name": "Mark Lunsford",
                   "text": "Mark Lunsford, B.S., M.S. — Airport and air transport consultant with more than 30 years of global experience in strategy, privatizations, master planning, operations, resilience, and sustainability; founder and principal of Appian Way Consulting.",
-                  "image": "assets/images/mark.jpeg",
+                  "image": "assets/images/mark.webp",
                   "link": "https://www.linkedin.com/in/mark-lunsford-8187a611",
                   "linkText": "View LinkedIn profile",
                   "fullText": "Mark Lunsford, B.S., M.S. brings more than 30 years of international experience in airport and air transport consulting, encompassing strategy, business and financial planning, privatization and transaction advisory, master planning, operations, safety, disaster resilience and sustainability. He is founder and principal of Appian Way Consulting and has advised the World Bank, IFC, national governments, airport authorities, airlines and private investors in North, Central and South America, the Caribbean, Europe, the Middle East, South Asia and Southeast Asia. He led major privatization and transaction processes—including the concession of five Brazilian airports—managed the Dallas/Fort Worth airport master plan and directed notable projects for the TSA that received a Department of Homeland Security award. Before founding Appian Way in 2015, he worked over 20 years at LeighFisher, where he became President. He holds a B.S. in Civil Engineering, summa cum laude (Virginia Tech) and an M.S. in Civil Engineering (Transportation, UC Berkeley)."
@@ -898,7 +898,7 @@
                 {
                   "name": "Aigerim Shalekenova",
                   "text": "Aigerim Shalekenova — Air transport and aviation safety expert with more than 17 years in aeronautical engineering, safety oversight, and strategic advisory; delivers practical and bankable solutions across global and emerging markets.",
-                  "image": "assets/images/aigerim-shalekenova-.jpg",
+                  "image": "assets/images/aigerim-shalekenova-.webp",
                   "link": "https://www.linkedin.com/in/aigerim-shalekenova-92a6aa43",
                   "linkText": "View LinkedIn profile",
                   "fullText": "Aigerim Shalekenova — Air Transport and Aviation Safety Expert brings more than 17 years of comprehensive experience in aircraft engineering, operational execution, regulatory oversight and strategic advisory. She combines operational experience—leading aircraft acquisitions and redeliveries, heavy maintenance programs and fleet transition strategies in Europe, North America, Asia and emerging markets—with regulatory leadership: as Director of Airworthiness at the Civil Aviation Administration of Kazakhstan, she created the national inspectorate, recruited and trained inspectors, developed procedures and aligned systems with ICAO standards, contributing to sustained improvements in USOAP (86.5%). In her role as an air transport expert consultant for the World Bank, she advises on sector reform, safety oversight strengthening, airport and air navigation modernization, climate resilience and investment planning, always focused on implementable and financeable recommendations. She has worked in the US, China, UK, EU, Brazil, Indonesia, Central Asia and the Caribbean, and is valued for her technical rigor, institutional understanding and execution focus. She speaks English, Kazakh and Russian."
@@ -906,7 +906,7 @@
                 {
                   "name": "Ogaga Udjo",
                   "text": "Ogaga Udjo — Global air transport expert with more than 15 years in aviation management, private advisory, and development finance; founder of Logics Advisory; experience in 40+ countries.",
-                  "image": "assets/images/ogaga.jpeg",
+                  "image": "assets/images/ogaga.webp",
                   "link": "https://www.linkedin.com/in/ogagaudjo",
                   "linkText": "View LinkedIn profile",
                   "fullText": "Ogaga Udjo — Global Air Transport Expert | Infrastructure | Strategy and Finance — brings more than 15 years of international experience in airline management, private advisory and development finance, with a focus on emerging and frontier markets. With roots in Pretoria and based in Washington, D.C., he operates at the intersection of aviation market realities from the Global South and North, policy, capital and institutions. Through his private practice, Logics Advisory (South Africa), he has led advisory work in air service development, corporate and policy strategy—including directing a flagship airline group privatization process—as well as airport developments, commercial and network strategies, and air policy work. As a World Bank advisor, he supports operations and advisory across an air transport portfolio exceeding $1 billion, spanning sector reform, regional connectivity and integration, PPP enablement and SAF (sustainable aviation fuels) commercialization. His industry origins include senior roles in network planning, strategy and leadership at Qatar Airways, Comair (British Airways franchise) and South African Airways. With a data-driven and stakeholder-centered approach, he has achieved successful outcomes in more than 40 countries. He is a recognized speaker and media contributor; he holds master's degrees in International Business and Strategy (South Africa) and in Finance (United States)."
@@ -914,7 +914,7 @@
                 {
                   "name": "Sandy Belle Habchi",
                   "text": "Sandy Belle Habchi — Aviation policy and regulation specialist with more than 10 years advising governments and international institutions on air sector reform, competition frameworks, and infrastructure governance.",
-                  "image": "assets/images/sandy.jpg",
+                  "image": "assets/images/sandy.webp",
                   "link": "https://www.linkedin.com/in/sandy-belle-habchi-5155235a",
                   "linkText": "View LinkedIn profile",
                   "fullText": "Sandy Belle Habchi brings more than ten years of specialized experience in aviation policy and regulation, advising governments and international institutions on air transport reform, competition frameworks and infrastructure governance. As a World Bank consultant, she has led air sector diagnostics, regulatory reform programs and market liberalization strategies, with emphasis on competition policy, airport economic regulation, institutional governance and regulatory framework design that improve market efficiency, transparency and oversight. Her regional work spans the Middle East, Africa and Asia and includes regulatory benchmarking, airport governance assessments and public-private partnership frameworks, as well as competition and regulatory analysis that supported the restructuring of the aviation sector in Saudi Arabia. She began her career at the Institute of Air and Space Law at McGill University, contributing to international research and publications in air and space law. She holds an LL.M. in Air and Space Law from McGill (Boeing Fellowship; Masao Sekiguchi Fellowship) and an LL.B. from the University of Nicosia. She speaks English, Arabic and Cypriot Greek."
@@ -935,7 +935,7 @@
           "description": "Contact Grupo Integral Basilea for agriculture, tourism, and consulting projects.",
           "hero": {
             "variant": "image",
-            "media": "assets/images/contactanos_gib.png",
+            "media": "assets/images/contactanos_gib.webp",
             "title": "Contact Us"
           },
           "sections": [

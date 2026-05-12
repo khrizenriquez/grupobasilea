@@ -1,0 +1,35 @@
+# Netlify configuration — Grupo Integral Basilea
+
+# Build settings (static site, no build command needed)
+[build]
+  publish = "."
+
+# Cache headers
+[[headers]]
+  # HTML: no cache — siempre fresco para reflejar cambios
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  # CSS y JS: caché larga con revalidación al cambiar el archivo
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Imágenes, fuentes e íconos: caché máxima (1 año)
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # data/i18n.json: sin caché (cambia con el contenido)
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
