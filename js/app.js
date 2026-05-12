@@ -600,16 +600,59 @@
 
   const renderInnGallery = (sectionData) => {
     const section = el("section", "section section--inn-gallery");
-    const viewport = el("div", "inn-gallery__viewport");
-    const track = el("div", "inn-gallery__track");
-    sectionData.images.forEach((src, index) => {
-      const slide = el("div", `inn-gallery__slide${index === 1 ? " inn-gallery__slide--active" : ""}`);
-      slide.appendChild(image(src, "", "inn-gallery__image"));
-      track.appendChild(slide);
+    const images_list = sectionData.images || [];
+    let current = 0;
+
+    // Main image area
+    const mainWrap = el("div", "inn-gallery__main");
+    const mainImg = document.createElement("img");
+    mainImg.className = "inn-gallery__main-img";
+    mainImg.src = images_list[0] || "";
+    mainImg.alt = "";
+    mainWrap.appendChild(mainImg);
+
+    // Prev / Next buttons
+    const btnPrev = el("button", "inn-gallery__btn inn-gallery__btn--prev", "‹");
+    btnPrev.setAttribute("aria-label", "Anterior");
+    const btnNext = el("button", "inn-gallery__btn inn-gallery__btn--next", "›");
+    btnNext.setAttribute("aria-label", "Siguiente");
+    mainWrap.appendChild(btnPrev);
+    mainWrap.appendChild(btnNext);
+
+    // Thumbnail strip
+    const thumbsWrap = el("div", "inn-gallery__thumbs");
+    const thumbEls = images_list.map((src, i) => {
+      const thumb = document.createElement("img");
+      thumb.className = "inn-gallery__thumb" + (i === 0 ? " inn-gallery__thumb--active" : "");
+      thumb.src = src;
+      thumb.alt = "";
+      thumb.loading = "lazy";
+      thumb.addEventListener("click", () => goTo(i));
+      thumbsWrap.appendChild(thumb);
+      return thumb;
     });
-    viewport.appendChild(track);
-    section.appendChild(viewport);
-    section.appendChild(el("button", "inn-gallery__next", "›"));
+
+    const goTo = (index) => {
+      thumbEls[current].classList.remove("inn-gallery__thumb--active");
+      current = (index + images_list.length) % images_list.length;
+      mainImg.src = images_list[current];
+      thumbEls[current].classList.add("inn-gallery__thumb--active");
+      // Scroll active thumb into view
+      thumbEls[current].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    };
+
+    btnPrev.addEventListener("click", () => goTo(current - 1));
+    btnNext.addEventListener("click", () => goTo(current + 1));
+
+    // Keyboard navigation
+    section.setAttribute("tabindex", "0");
+    section.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") goTo(current + 1);
+      else if (e.key === "ArrowLeft") goTo(current - 1);
+    });
+
+    section.appendChild(mainWrap);
+    section.appendChild(thumbsWrap);
 
     return section;
   };
