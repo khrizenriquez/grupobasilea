@@ -1807,7 +1807,10 @@ body[data-page="inn"] .footer-bar {
   box-shadow: 0 8px 24px rgba(10, 18, 28, 0.10);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.team-photo-wrap:hover {
+.team-card {
+  cursor: default;
+}
+.team-card:hover .team-photo-wrap {
   box-shadow: 0 20px 48px rgba(10, 18, 28, 0.22);
   transform: translateY(-4px);
 }
@@ -1820,7 +1823,7 @@ body[data-page="inn"] .footer-bar {
   background: #d9dee3;
   transition: transform 0.4s ease;
 }
-.team-photo-wrap:hover .team-photo {
+.team-card:hover .team-photo {
   transform: scale(1.07);
 }
 
@@ -1840,8 +1843,8 @@ body[data-page="inn"] .footer-bar {
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
-.team-photo-wrap:hover .team-photo-overlay,
-.team-photo-wrap:focus-within .team-photo-overlay {
+.team-card:hover .team-photo-overlay,
+.team-card:focus-within .team-photo-overlay {
   opacity: 1;
   pointer-events: auto;
 }
