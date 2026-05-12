@@ -305,9 +305,34 @@
             {
               "type": "innGallery",
               "images": [
-                "assets/images/1_header.png",
-                "assets/images/3_fotolink-aribnb-4a3f571.webp",
-                "assets/images/2022-11-26-13-16-48-pb260131.webp"
+                "assets/images/pb-gallery-01.webp",
+                "assets/images/pb-gallery-02.webp",
+                "assets/images/pb-gallery-03.webp",
+                "assets/images/pb-gallery-04.webp",
+                "assets/images/pb-gallery-05.webp",
+                "assets/images/pb-gallery-06.webp",
+                "assets/images/pb-gallery-07.webp",
+                "assets/images/pb-gallery-08.webp",
+                "assets/images/pb-gallery-09.webp",
+                "assets/images/pb-gallery-10.webp",
+                "assets/images/pb-gallery-11.webp",
+                "assets/images/pb-gallery-12.webp",
+                "assets/images/pb-gallery-13.webp",
+                "assets/images/pb-gallery-14.webp",
+                "assets/images/2022-11-26-13-16-48-pb260131.webp",
+                "assets/images/pb-gallery-15.webp",
+                "assets/images/pb-gallery-16.webp",
+                "assets/images/pb-gallery-17.webp",
+                "assets/images/pb-gallery-18.webp",
+                "assets/images/pb-gallery-19.webp",
+                "assets/images/pb-gallery-20.webp",
+                "assets/images/pb-gallery-21.webp",
+                "assets/images/pb-gallery-22.webp",
+                "assets/images/pb-gallery-23.webp",
+                "assets/images/pb-gallery-24.webp",
+                "assets/images/pb-gallery-25.webp",
+                "assets/images/pb-gallery-26.webp",
+                "assets/images/pb-gallery-27.webp"
               ]
             },
             {
@@ -441,6 +466,27 @@
               ]
             },
             {
+              "type": "consultingGallery",
+              "images": [
+                "assets/images/cg-gallery-01.webp",
+                "assets/images/cg-gallery-02.webp",
+                "assets/images/cg-gallery-03.webp",
+                "assets/images/cg-gallery-04.webp",
+                "assets/images/cg-gallery-05.webp",
+                "assets/images/cg-gallery-06.webp",
+                "assets/images/cg-gallery-07.webp",
+                "assets/images/cg-gallery-08.webp",
+                "assets/images/cg-gallery-09.webp",
+                "assets/images/cg-gallery-10.webp",
+                "assets/images/cg-gallery-11.webp",
+                "assets/images/cg-gallery-12.webp",
+                "assets/images/cg-gallery-13.webp",
+                "assets/images/cg-gallery-14.webp",
+                "assets/images/cg-gallery-15.webp",
+                "assets/images/cg-gallery-16.webp"
+              ]
+            },
+            {
               "type": "cta"
             },
             {
@@ -469,8 +515,16 @@
               "email": "info@grupobasilea.com",
               "phoneLabel": "Teléfono",
               "phones": [
-                { "label": "Internacional:", "number": "+1 (202) 640-1830", "url": "tel:+12026401830" },
-                { "label": "Guatemala:", "number": "+502 5411-4460", "url": "tel:+50254114460" }
+                {
+                  "label": "Internacional:",
+                  "number": "+1 (202) 640-1830",
+                  "url": "tel:+12026401830"
+                },
+                {
+                  "label": "Guatemala:",
+                  "number": "+502 5411-4460",
+                  "url": "tel:+50254114460"
+                }
               ],
               "address": "Guatemala City, Guatemala",
               "hoursTitle": "Horario",
@@ -786,9 +840,34 @@
             {
               "type": "innGallery",
               "images": [
-                "assets/images/1_header.png",
-                "assets/images/3_fotolink-aribnb-4a3f571.webp",
-                "assets/images/2022-11-26-13-16-48-pb260131.webp"
+                "assets/images/pb-gallery-01.webp",
+                "assets/images/pb-gallery-02.webp",
+                "assets/images/pb-gallery-03.webp",
+                "assets/images/pb-gallery-04.webp",
+                "assets/images/pb-gallery-05.webp",
+                "assets/images/pb-gallery-06.webp",
+                "assets/images/pb-gallery-07.webp",
+                "assets/images/pb-gallery-08.webp",
+                "assets/images/pb-gallery-09.webp",
+                "assets/images/pb-gallery-10.webp",
+                "assets/images/pb-gallery-11.webp",
+                "assets/images/pb-gallery-12.webp",
+                "assets/images/pb-gallery-13.webp",
+                "assets/images/pb-gallery-14.webp",
+                "assets/images/2022-11-26-13-16-48-pb260131.webp",
+                "assets/images/pb-gallery-15.webp",
+                "assets/images/pb-gallery-16.webp",
+                "assets/images/pb-gallery-17.webp",
+                "assets/images/pb-gallery-18.webp",
+                "assets/images/pb-gallery-19.webp",
+                "assets/images/pb-gallery-20.webp",
+                "assets/images/pb-gallery-21.webp",
+                "assets/images/pb-gallery-22.webp",
+                "assets/images/pb-gallery-23.webp",
+                "assets/images/pb-gallery-24.webp",
+                "assets/images/pb-gallery-25.webp",
+                "assets/images/pb-gallery-26.webp",
+                "assets/images/pb-gallery-27.webp"
               ]
             },
             {
@@ -922,6 +1001,27 @@
               ]
             },
             {
+              "type": "consultingGallery",
+              "images": [
+                "assets/images/cg-gallery-01.webp",
+                "assets/images/cg-gallery-02.webp",
+                "assets/images/cg-gallery-03.webp",
+                "assets/images/cg-gallery-04.webp",
+                "assets/images/cg-gallery-05.webp",
+                "assets/images/cg-gallery-06.webp",
+                "assets/images/cg-gallery-07.webp",
+                "assets/images/cg-gallery-08.webp",
+                "assets/images/cg-gallery-09.webp",
+                "assets/images/cg-gallery-10.webp",
+                "assets/images/cg-gallery-11.webp",
+                "assets/images/cg-gallery-12.webp",
+                "assets/images/cg-gallery-13.webp",
+                "assets/images/cg-gallery-14.webp",
+                "assets/images/cg-gallery-15.webp",
+                "assets/images/cg-gallery-16.webp"
+              ]
+            },
+            {
               "type": "cta"
             },
             {
@@ -950,8 +1050,16 @@
               "email": "info@grupobasilea.com",
               "phoneLabel": "Phone",
               "phones": [
-                { "label": "International:", "number": "+1 (202) 640-1830", "url": "tel:+12026401830" },
-                { "label": "Guatemala:", "number": "+502 5411-4460", "url": "tel:+50254114460" }
+                {
+                  "label": "International:",
+                  "number": "+1 (202) 640-1830",
+                  "url": "tel:+12026401830"
+                },
+                {
+                  "label": "Guatemala:",
+                  "number": "+502 5411-4460",
+                  "url": "tel:+50254114460"
+                }
               ],
               "address": "Guatemala City, Guatemala",
               "hoursTitle": "Hours",
