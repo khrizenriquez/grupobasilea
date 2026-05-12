@@ -413,6 +413,16 @@
       img.loading = "lazy";
       photoWrap.appendChild(img);
 
+      const nameEl = el("h2", "team-name", item.name);
+
+      const moreBtn = document.createElement("button");
+      moreBtn.className = "team-more-btn";
+      moreBtn.type = "button";
+      moreBtn.setAttribute("aria-label", "Abrir perfil de " + item.name);
+      moreBtn.dataset.openProfile = profileId;
+      moreBtn.textContent = "Ver más";
+
+      // Overlay covers the entire card (image + name + button)
       const overlay = el("div", "team-photo-overlay");
       overlay.setAttribute("aria-hidden", "true");
       const overlayText = el("p", "team-overlay__text", item.text);
@@ -425,20 +435,11 @@
       overlayLink.textContent = "Ver perfil";
       overlay.appendChild(overlayText);
       overlay.appendChild(overlayLink);
-      photoWrap.appendChild(overlay);
-
-      const nameEl = el("h2", "team-name", item.name);
-
-      const moreBtn = document.createElement("button");
-      moreBtn.className = "team-more-btn";
-      moreBtn.type = "button";
-      moreBtn.setAttribute("aria-label", "Abrir perfil de " + item.name);
-      moreBtn.dataset.openProfile = profileId;
-      moreBtn.textContent = "Ver más";
 
       card.appendChild(photoWrap);
       card.appendChild(nameEl);
       card.appendChild(moreBtn);
+      card.appendChild(overlay); // last child → sits on top via position:absolute
       grid.appendChild(card);
     });
 

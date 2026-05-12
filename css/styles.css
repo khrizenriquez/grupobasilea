@@ -1796,23 +1796,22 @@ body[data-page="inn"] .footer-bar {
   text-align: center;
 }
 
-/* Photo wrap — circular container with hover overlay */
+/* Photo wrap — circular container */
 .team-photo-wrap {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  cursor: default;
   box-shadow: 0 8px 24px rgba(10, 18, 28, 0.10);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 .team-card {
   cursor: default;
+  position: relative;
 }
 .team-card:hover .team-photo-wrap {
   box-shadow: 0 20px 48px rgba(10, 18, 28, 0.22);
-  transform: translateY(-4px);
 }
 .team-photo {
   display: block;
@@ -1821,27 +1820,24 @@ body[data-page="inn"] .footer-bar {
   object-fit: cover;
   border-radius: 50%;
   background: #d9dee3;
-  transition: transform 0.4s ease;
-}
-.team-card:hover .team-photo {
-  transform: scale(1.07);
 }
 
-/* Hover overlay */
+/* Hover overlay — covers entire card */
 .team-photo-overlay {
   position: absolute;
   inset: 0;
-  border-radius: 50%;
-  background: rgba(11, 31, 58, 0.88);
+  border-radius: 12px;
+  background: rgba(11, 31, 58, 0.92);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 22px;
+  gap: 20px;
+  padding: 28px 24px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  z-index: 2;
 }
 .team-card:hover .team-photo-overlay,
 .team-card:focus-within .team-photo-overlay {
