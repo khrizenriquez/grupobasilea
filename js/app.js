@@ -403,33 +403,42 @@
       const card = document.createElement("article");
       card.className = "team-card";
 
-      const btn = document.createElement("button");
-      btn.className = "team-photo-button";
-      btn.type = "button";
-      btn.setAttribute("aria-label", "Abrir perfil de " + item.name);
-      btn.dataset.openProfile = profileId;
+      // Photo wrap with hover overlay
+      const photoWrap = el("div", "team-photo-wrap");
 
       const img = document.createElement("img");
       img.className = "team-photo";
       img.src = item.image;
       img.alt = item.name;
       img.loading = "lazy";
-      btn.appendChild(img);
+      photoWrap.appendChild(img);
+
+      const overlay = el("div", "team-photo-overlay");
+      overlay.setAttribute("aria-hidden", "true");
+      const overlayText = el("p", "team-overlay__text", item.text);
+      const overlayLink = document.createElement("a");
+      overlayLink.className = "team-overlay__link";
+      overlayLink.href = item.link;
+      overlayLink.target = "_blank";
+      overlayLink.rel = "noopener";
+      overlayLink.setAttribute("aria-label", item.linkText);
+      overlayLink.textContent = "Ver perfil";
+      overlay.appendChild(overlayText);
+      overlay.appendChild(overlayLink);
+      photoWrap.appendChild(overlay);
 
       const nameEl = el("h2", "team-name", item.name);
-      const summaryEl = el("p", "team-summary", item.text);
 
-      const lnk = document.createElement("a");
-      lnk.className = "team-link";
-      lnk.href = item.link;
-      lnk.target = "_blank";
-      lnk.rel = "noopener";
-      lnk.textContent = item.linkText;
+      const moreBtn = document.createElement("button");
+      moreBtn.className = "team-more-btn";
+      moreBtn.type = "button";
+      moreBtn.setAttribute("aria-label", "Abrir perfil de " + item.name);
+      moreBtn.dataset.openProfile = profileId;
+      moreBtn.textContent = "Ver más";
 
-      card.appendChild(btn);
+      card.appendChild(photoWrap);
       card.appendChild(nameEl);
-      card.appendChild(summaryEl);
-      card.appendChild(lnk);
+      card.appendChild(moreBtn);
       grid.appendChild(card);
     });
 
