@@ -1,5 +1,7 @@
 # Grupo Integral Basilea — Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/41eee693-a813-4935-af95-4c34e9962f97/deploy-status)](https://app.netlify.com/projects/grupobasilea/deploys)
+
 Static marketing website for Grupo Integral Basilea (GIB), a Guatemalan conglomerate operating in agriculture, eco-tourism, and consulting.
 
 ---

@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuestro equipo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --team-bg: #F8F9FA;
+      --team-heading: #171718;
+      --team-text: #565a5d;
+      --team-button: #000000;
+      --team-button-text: #ffffff;
+      --team-border: rgba(23, 23, 24, 0.08);
+      --team-shadow: 0 24px 48px rgba(10, 18, 28, 0.14);
+      --team-overlay: rgba(10, 16, 24, 0.62);
+      --team-max: 1280px;
+      --team-card-width: 369.5px;
+      --team-image-size: 369.5px;
+      --team-gap: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background-color: var(--team-bg);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Cabin", Georgia, serif;
+      color: var(--team-text);
+      background-color: var(--team-bg);
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .team-section {
+      width: 100%;
+      min-height: 100vh;
+      background-color: var(--team-bg);
+      padding: 0;
+    }
+
+    .team-shell {
+      max-width: var(--team-max);
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      background-color: var(--team-bg);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 48px;
+      row-gap: 48px;
+      justify-items: center;
+      align-items: stretch;
+      background-color: var(--team-bg);
+    }
+
+    .team-card {
+      width: 100%;
+      max-width: var(--team-card-width);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      background-color: var(--team-bg);
+    }
+
+    .team-photo-button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      position: relative;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .team-photo-button:hover,
+    .team-photo-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(10, 18, 28, 0.14);
+      outline: none;
+    }
+
+    .team-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #d9dee3;
+    }
+
+    .team-name {
+      margin: 24px 0 0;
+      color: var(--team-heading);
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 400;
+    }
+
+    .team-summary {
+      margin: 24px 0;
+      min-height: 72px;
+      color: var(--team-text);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .team-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 242px;
+      min-height: 56px;
+      margin-top: auto;
+      padding: 8px 32px;
+      background: var(--team-button);
+      color: var(--team-button-text);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.994px;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 600;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .team-link:hover,
+    .team-link:focus-visible {
+      opacity: 0.88;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .team-modal[hidden] {
+      display: none;
+    }
+
+    .team-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .team-modal__backdrop {
+      position: absolute;
+      inset: 0;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background: var(--team-overlay);
+      cursor: pointer;
+    }
+
+    .team-modal__dialog {
+      position: relative;
+      z-index: 1;
+      width: min(920px, 100%);
+      max-height: min(86vh, 920px);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+      background: var(--team-bg);
+      border: 1px solid var(--team-border);
+      box-shadow: var(--team-shadow);
+    }
+
+    .team-modal__media {
+      padding: 32px 24px 32px 32px;
+      background: var(--team-bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      border-right: 1px solid var(--team-border);
+    }
+
+    .team-modal__photo {
+      width: min(220px, 100%);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      background: #d9dee3;
+    }
+
+    .team-modal__aside-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 8px 20px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.994px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .team-modal__content {
+      background: var(--team-bg);
+      padding: 32px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .team-modal__topbar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .team-modal__title {
+      margin: 0;
+      color: var(--team-heading);
+      font-size: clamp(28px, 3vw, 36px);
+      line-height: 1.1;
+      font-weight: 400;
+    }
+
+    .team-modal__subtitle {
+      margin: 12px 0 0;
+      color: var(--team-text);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .team-modal__close {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--team-heading);
+      font-size: 32px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0;
+      flex: 0 0 auto;
+    }
+
+    .team-modal__body {
+      overflow: auto;
+      padding-right: 8px;
+      color: var(--team-text);
+      font-size: 16px;
+      line-height: 1.72;
+      white-space: pre-line;
+    }
+
+    .team-modal__body p {
+      margin: 0;
+    }
+
+    body.team-modal-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 1024px) {
+      .team-shell {
+        padding: 0 16px 40px;
+      }
+
+      .team-grid {
+        column-gap: 24px;
+        row-gap: 40px;
+      }
+
+      .team-name {
+        font-size: 20px;
+      }
+
+      .team-summary {
+        min-height: 0;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .team-link {
+        width: 100%;
+        min-width: 0;
+        padding: 8px 14px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .team-modal__dialog {
+        grid-template-columns: 1fr;
+        max-height: 92vh;
+      }
+
+      .team-modal__media {
+        padding: 28px 28px 20px;
+        border-right: 0;
+        border-bottom: 1px solid var(--team-border);
+      }
+
+      .team-modal__photo {
+        width: min(180px, 100%);
+      }
+
+      .team-modal__content {
+        padding: 24px 24px 28px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .team-shell {
+        padding: 0 12px 32px;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 12px;
+        row-gap: 28px;
+      }
+
+      .team-card {
+        max-width: 100%;
+      }
+
+      .team-name {
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      .team-summary {
+        min-height: 0;
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .team-link {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        margin-top: 16px;
+        padding: 8px 10px;
+        font-size: 10px;
+        letter-spacing: 0.65px;
+      }
+
+      .team-modal {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="team-section" aria-label="Nuestro equipo">
+    <div class="team-shell">
+      <div class="team-grid">
+        <article class="team-card" data-profile-id="andy-ricover">
+          <button class="team-photo-button" type="button" aria-label="Abrir perfil completo de Andy Ricover" data-open-profile="andy-ricover">
+            <img class="team-photo" src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Andy%20Ricover.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:92.62%25/rs=w:365,h:365,cg:true" alt="Andy Ricover" loading="lazy" />
+          </button>
+          <h2 class="team-name">Andy Ricover</h2>
+          <p class="team-summary">Andy Ricover, BA, MBA — Especialista global en transporte aéreo con 31 años de experiencia en economía de la aviación, políticas, privatizaciones, PPP y valoración; asesor de bancos multilaterales y gobiernos en 106 países.</p>
+          <a class="team-link" href="https://www.linkedin.com/in/andy-ricover-1001a1136?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+        </article>
+
+        <article class="team-card" data-profile-id="charles-schlumberger">
+          <button class="team-photo-button" type="button" aria-label="Abrir perfil completo de Dr. Charles E. Schlumberger" data-open-profile="charles-schlumberger">
+            <img class="team-photo" src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Charles.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:65.14%25/rs=w:365,h:365,cg:true" alt="Dr. Charles E. Schlumberger" loading="lazy" />
+          </button>
+          <h2 class="team-name">Dr. Charles E. Schlumberger</h2>
+          <p class="team-summary">Dr. Charles E. Schlumberger — Especialista principal en transporte aéreo — Nacional suizo; especialista en transporte aéreo con más de 27 años en el Banco Mundial; experto en política aeronáutica, financiación de infraestructuras, reestructuración y privatización.</p>
+          <a class="team-link" href="https://www.linkedin.com/in/charles-schlumberger-1653174?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+        </article>
+
+        <article class="team-card" data-profile-id="mark-lunsford">
+          <button class="team-photo-button" type="button" aria-label="Abrir perfil completo de Mark Lunsford" data-open-profile="mark-lunsford">
+            <img class="team-photo" src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Mark.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:99.1%25/rs=w:365,h:365,cg:true" alt="Mark Lunsford" loading="lazy" />
+          </button>
+          <h2 class="team-name">Mark Lunsford</h2>
+          <p class="team-summary">Mark Lunsford, B.S., M.S. — Consultor en aeropuertos y transporte aéreo con más de 30 años de experiencia global en estrategia, privatizaciones, planificación maestra, operaciones, resiliencia y sostenibilidad; fundador y principal de Appian Way Consulting.</p>
+          <a class="team-link" href="https://www.linkedin.com/in/mark-lunsford-8187a611?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+        </article>
+
+        <article class="team-card" data-profile-id="aigerim-shalekenova">
+          <button class="team-photo-button" type="button" aria-label="Abrir perfil completo de Aigerim Shalekenova" data-open-profile="aigerim-shalekenova">
+            <img class="team-photo" src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Aigerim%20Shalekenova%20.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:62.5%25/rs=w:365,h:365,cg:true" alt="Aigerim Shalekenova" loading="lazy" />
+          </button>
+          <h2 class="team-name">Aigerim Shalekenova</h2>
+          <p class="team-summary">Aigerim Shalekenova — Experta en transporte aéreo y seguridad aeronáutica con más de 17 años en ingeniería aeronáutica, supervisión de seguridad y asesoría estratégica; ofrece soluciones prácticas y financiables en mercados globales y emergentes.</p>
+          <a class="team-link" href="https://www.linkedin.com/in/aigerim-shalekenova-92a6aa43?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+        </article>
+
+        <article class="team-card" data-profile-id="ogaga-udjo">
+          <button class="team-photo-button" type="button" aria-label="Abrir perfil completo de Ogaga Udjo" data-open-profile="ogaga-udjo">
+            <img class="team-photo" src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Ogaga.jpeg/:/cr=t:3.92%25,l:0%25,w:100%25,h:75.21%25/rs=w:365,h:365,cg:true" alt="Ogaga Udjo" loading="lazy" />
+          </button>
+          <h2 class="team-name">Ogaga Udjo</h2>
+          <p class="team-summary">Ogaga Udjo — Experto global en transporte aéreo con más de 15 años en gestión aérea, asesoría privada y financiación para el desarrollo; fundador de Logics Advisory; experiencia en 40+ países.</p>
+          <a class="team-link" href="https://www.linkedin.com/in/ogagaudjo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+        </article>
+
+        <article class="team-card" data-profile-id="sandy-belle-habchi">
+          <button class="team-photo-button" type="button" aria-label="Abrir perfil completo de Sandy Belle Habchi" data-open-profile="sandy-belle-habchi">
+            <img class="team-photo" src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Sandy.jpg/:/cr=t:3.19%25,l:0%25,w:100%25,h:66.64%25/rs=w:365,h:365,cg:true" alt="Sandy Belle Habchi" loading="lazy" />
+          </button>
+          <h2 class="team-name">Sandy Belle Habchi</h2>
+          <p class="team-summary">Sandy Belle Habchi — Especialista en política y regulación aeronáutica con más de 10 años asesorando a gobiernos e instituciones internacionales en reforma del sector aéreo, marcos de competencia y gobernanza de infraestructuras.</p>
+          <a class="team-link" href="https://www.linkedin.com/in/sandy-belle-habchi-5155235a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="team-modal" id="team-modal" hidden>
+    <button class="team-modal__backdrop" type="button" aria-label="Cerrar modal"></button>
+    <div class="team-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+      <div class="team-modal__media">
+        <img class="team-modal__photo" id="team-modal-photo" src="" alt="" />
+        <a class="team-modal__aside-link" id="team-modal-link-side" href="#" target="_blank" rel="noopener">Ver perfil en LinkedIn</a>
+      </div>
+
+      <div class="team-modal__content">
+        <div class="team-modal__topbar">
+          <div>
+            <h3 class="team-modal__title" id="team-modal-title"></h3>
+            <p class="team-modal__subtitle" id="team-modal-subtitle"></p>
+          </div>
+          <button class="team-modal__close" type="button" aria-label="Cerrar modal">&times;</button>
+        </div>
+
+        <div class="team-modal__body" id="team-modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const teamProfiles = {
+      "andy-ricover": {
+        name: "Andy Ricover",
+        summary: "",
+        image: "https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Andy%20Ricover.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:92.62%25/rs=w:365,h:365,cg:true",
+        linkedin: "https://www.linkedin.com/in/andy-ricover-1001a1136?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        fullText: "Andy Ricover, BA en Economía, MBA aporta 31 años de experiencia en economía de la aviación, privatizaciones, políticas de transporte aéreo, previsión de tráfico, regulación, due diligence y valoración. Ha trabajado en más de 340 proyectos en 106 países para gobiernos, operadores, consorcios licitantes, despachos jurídicos y bancos de desarrollo, y ha sido especialista sénior en transporte aéreo del Grupo Banco Mundial y del Banco Interamericano de Desarrollo. Andy ha diseñado políticas nacionales de aviación para más de 30 Estados, asesorado en numerosos procesos de PPP para aeropuertos y aerolíneas, y actuado como perito en arbitrajes internacionales. Habla español, inglés y portugués, y tiene conocimientos de francés e italiano."
+      },
+      "charles-schlumberger": {
+        name: "Dr. Charles E. Schlumberger",
+        summary: "",
+        image: "https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Charles.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:65.14%25/rs=w:365,h:365,cg:true",
+        linkedin: "https://www.linkedin.com/in/charles-schlumberger-1653174?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        fullText: "Dr. Charles E. Schlumberger es un profesional suizo que prestó servicio más de 27 años en el Banco Mundial en Washington D.C. como Especialista principal en transporte aéreo, responsable de las prioridades de política y desarrollo del Banco en transporte aéreo. Ha supervisado y participado en proyectos globales que abarcan financiación de infraestructuras aeroportuarias y de transporte aéreo, reestructuración y privatización de aerolíneas, programas de seguridad y protección, y asesoría de políticas para gobiernos. Antes de su nombramiento en el Banco Mundial en 1998, fue Vicepresidente en Union Bank of Switzerland (UBS), responsable de reestructuración de créditos internacionales; anteriormente fue director ejecutivo de un grupo de logística y transporte en Francia y ejerció como abogado especializado en asuntos aeronáuticos en Suiza. Obtuvo su título en Derecho en la Universidad de Basilea (1986), con especialización en derecho aeronáutico y procedimientos concursales; posee un MBA de Harvard Business School y un Doctorado en Derecho Civil del Institute of Air and Space Law de la Universidad McGill. Es piloto con licencias FAA y EASA e instructor de vuelo certificado, Miembro (Fellow) de la Royal Aeronautical Society, y habla con fluidez inglés, francés, alemán, sueco y español."
+      },
+      "mark-lunsford": {
+        name: "Mark Lunsford",
+        summary: "",
+        image: "https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Mark.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:99.1%25/rs=w:365,h:365,cg:true",
+        linkedin: "https://www.linkedin.com/in/mark-lunsford-8187a611?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        fullText: "Mark Lunsford, B.S., M.S. aporta más de 30 años de experiencia internacional en consultoría aeroportuaria y de transporte aéreo, abarcando estrategia, planificación empresarial y financiera, asesoría en privatizaciones y transacciones, planificación maestra, operaciones, seguridad, resiliencia ante desastres y sostenibilidad. Es fundador y director de Appian Way Consulting y ha asesorado al Banco Mundial, a la IFC, a gobiernos nacionales, autoridades aeroportuarias, aerolíneas e inversores privados en Norte, Centro y Sudamérica, el Caribe, Europa, Oriente Medio, el sur de Asia y el sudeste asiático. Lideró importantes procesos de privatización y transacción —incluida la concesión de cinco aeropuertos brasileños— gestionó el plan maestro del aeropuerto Dallas/Fort Worth y dirigió proyectos destacados para la TSA que recibieron un premio del Departamento de Seguridad Nacional. Antes de fundar Appian Way en 2015, trabajó más de 20 años en LeighFisher, donde llegó a ser Presidente. Posee un B.S. en Ingeniería Civil, summa cum laude (Virginia Tech) y un M.S. en Ingeniería Civil (Transporte, UC Berkeley)."
+      },
+      "aigerim-shalekenova": {
+        name: "Aigerim Shalekenova",
+        summary: "",
+        image: "https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Aigerim%20Shalekenova%20.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:62.5%25/rs=w:365,h:365,cg:true",
+        linkedin: "https://www.linkedin.com/in/aigerim-shalekenova-92a6aa43?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        fullText: "Aigerim Shalekenova — Experta en transporte aéreo y seguridad aeronáutica aporta más de 17 años de experiencia integral en ingeniería de aeronaves, ejecución operativa, supervisión regulatoria y asesoría estratégica. Combina experiencia operativa —liderando adquisiciones y redeliveries de aeronaves, programas de mantenimiento mayor y estrategias de transición de flota en Europa, Norteamérica, Asia y mercados emergentes— con liderazgo regulatorio: como Directora de Aeronavegabilidad en la Administración de Aviación de Kazajistán creó la inspectoría nacional, reclutó y formó inspectores, desarrolló procedimientos y alineó sistemas con normas ICAO, contribuyendo a mejoras sostenidas en USOAP (86.5%). En su rol como consultora experta en transporte aéreo para el Banco Mundial asesora en reforma sectorial, fortalecimiento de supervisión de seguridad, modernización aeroportuaria y de navegación aérea, resiliencia climática y planificación de inversiones, siempre orientada a recomendaciones implementables y financiables. Ha trabajado en la EE. UU., China, Reino Unido, UE, Brasil, Indonesia, Asia Central y el Caribe, y es valorada por su rigor técnico, comprensión institucional y enfoque en la ejecución. Habla inglés, kazajo y ruso."
+      },
+      "ogaga-udjo": {
+        name: "Ogaga Udjo",
+        summary: "",
+        image: "https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Ogaga.jpeg/:/cr=t:3.92%25,l:0%25,w:100%25,h:75.21%25/rs=w:365,h:365,cg:true",
+        linkedin: "https://www.linkedin.com/in/ogagaudjo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        fullText: "Ogaga Udjo — Experto global en transporte aéreo | Infraestructura | Estrategia y Finanzas — aporta más de 15 años de experiencia internacional en gestión de aerolíneas, asesoría privada y financiación para el desarrollo, con foco en mercados emergentes y fronterizos. Con raíces en Pretoria y con base en Washington, D.C., opera en la intersección de las realidades del mercado aéreo del Sur y del Norte global, la política, el capital y las instituciones. A través de su práctica privada, Logics Advisory (Sudáfrica), ha liderado asesorías en desarrollo de servicios aéreos, estrategia corporativa y de políticas —incluyendo la dirección de un proceso emblemático de privatización de un grupo aéreo— así como desarrollos aeroportuarios, estrategias comerciales y de red, y actuaciones aeropolíticas. En calidad de asesor para el Banco Mundial, apoya operaciones y asesorías en una cartera de transporte aéreo superior a $1.000 M, que abarca reforma sectorial, conectividad regional e integración, habilitación de PPP y comercialización de SAF (combustibles sostenibles de aviación). Sus orígenes en la industria incluyen roles senior en planificación de red, estrategia y liderazgo en Qatar Airways, Comair (franquicia British Airways) y South African Airways. Con un enfoque basado en datos y centrado en las partes interesadas, ha logrado resultados exitosos en más de 40 países. Es ponente reconocido y colaborador en medios; posee maestrías en Negocios Internacionales y Estrategia (Sudáfrica) y en Finanzas (Estados Unidos)."
+      },
+      "sandy-belle-habchi": {
+        name: "Sandy Belle Habchi",
+        summary: "",
+        image: "https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/Sandy.jpg/:/cr=t:3.19%25,l:0%25,w:100%25,h:66.64%25/rs=w:365,h:365,cg:true",
+        linkedin: "https://www.linkedin.com/in/sandy-belle-habchi-5155235a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        fullText: "Sandy Belle Habchi aporta más de diez años de experiencia especializada en política y regulación aeronáutica, asesorando a gobiernos e instituciones internacionales en reforma del transporte aéreo, marcos de competencia y gobernanza de infraestructuras. Como consultora del Banco Mundial ha liderado diagnósticos del sector aéreo, programas de reforma regulatoria y estrategias de liberalización de mercados, con énfasis en política de competencia, regulación económica aeroportuaria, gobernanza institucional y diseño de marcos regulatorios que mejoran la eficiencia, la transparencia y la supervisión del mercado. Su trabajo regional abarca Oriente Medio, África y Asia e incluye benchmarking regulatorio, evaluaciones de gobernanza aeroportuaria y marcos de asociación públicoprivada, así como el análisis de competencia y regulación que apoyó la reestructuración del sector aéreo en Arabia Saudita. Inició su carrera en el Institute of Air and Space Law de la Universidad McGill, contribuyendo a investigaciones y publicaciones internacionales en derecho aeronáutico y espacial. Posee un LL.M. en Derecho Aeronáutico y Espacial por McGill (Boeing Fellowship; Masao Sekiguchi Fellowship) y un LL.B. por la University of Nicosia. Habla inglés, árabe y griego (chipriota)."
+      }
+    };
+
+    const modal = document.getElementById("team-modal");
+    const modalTitle = document.getElementById("team-modal-title");
+    const modalSubtitle = document.getElementById("team-modal-subtitle");
+    const modalBody = document.getElementById("team-modal-body");
+    const modalPhoto = document.getElementById("team-modal-photo");
+    const sideLink = document.getElementById("team-modal-link-side");
+    const closeButton = modal.querySelector(".team-modal__close");
+    const backdrop = modal.querySelector(".team-modal__backdrop");
+    let lastTrigger = null;
+
+    function openProfile(profileId, trigger) {
+      const profile = teamProfiles[profileId];
+      if (!profile) {
+        return;
+      }
+
+      lastTrigger = trigger || null;
+      modalTitle.textContent = profile.name;
+      modalSubtitle.textContent = profile.summary;
+      modalBody.innerHTML = "";
+
+      const paragraphs = String(profile.fullText)
+        .split(/\n\s*\n/)
+        .map((chunk) => chunk.trim())
+        .filter(Boolean);
+
+      paragraphs.forEach((paragraphText) => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = paragraphText;
+        paragraph.style.marginBottom = "1.15em";
+        modalBody.appendChild(paragraph);
+      });
+
+      modalPhoto.src = profile.image;
+      modalPhoto.alt = profile.name;
+      sideLink.href = profile.linkedin;
+
+      modal.hidden = false;
+      document.body.classList.add("team-modal-open");
+      closeButton.focus();
+    }
+
+    function closeProfile() {
+      modal.hidden = true;
+      document.body.classList.remove("team-modal-open");
+      if (lastTrigger) {
+        lastTrigger.focus();
+      }
+    }
+
+    document.querySelectorAll("[data-open-profile]").forEach((button) => {
+      button.addEventListener("click", () => {
+        openProfile(button.getAttribute("data-open-profile"), button);
+      });
+    });
+
+    closeButton.addEventListener("click", closeProfile);
+    backdrop.addEventListener("click", closeProfile);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !modal.hidden) {
+        closeProfile();
+      }
+    });
+  </script>
+</body>
+</html>

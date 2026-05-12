@@ -403,33 +403,50 @@
       const card = document.createElement("article");
       card.className = "team-card";
 
-      const btn = document.createElement("button");
-      btn.className = "team-photo-button";
-      btn.type = "button";
-      btn.setAttribute("aria-label", "Abrir perfil de " + item.name);
-      btn.dataset.openProfile = profileId;
+      // Photo wrap with hover overlay
+      const photoWrap = el("div", "team-photo-wrap");
 
       const img = document.createElement("img");
       img.className = "team-photo";
       img.src = item.image;
       img.alt = item.name;
       img.loading = "lazy";
-      btn.appendChild(img);
+      photoWrap.appendChild(img);
 
       const nameEl = el("h2", "team-name", item.name);
-      const summaryEl = el("p", "team-summary", item.text);
 
-      const lnk = document.createElement("a");
-      lnk.className = "team-link";
-      lnk.href = item.link;
-      lnk.target = "_blank";
-      lnk.rel = "noopener";
-      lnk.textContent = item.linkText;
+      const moreBtn = document.createElement("button");
+      moreBtn.className = "team-more-btn";
+      moreBtn.type = "button";
+      moreBtn.setAttribute("aria-label", "Abrir perfil de " + item.name);
+      moreBtn.dataset.openProfile = profileId;
+      moreBtn.textContent = "Ver más";
 
-      card.appendChild(btn);
+      // Overlay covers the entire card (image + name + button)
+      const overlay = el("div", "team-photo-overlay");
+      overlay.setAttribute("aria-hidden", "true");
+      const overlayText = el("p", "team-overlay__text", item.text);
+      const overlayLink = document.createElement("a");
+      overlayLink.className = "team-overlay__link";
+      overlayLink.href = item.link;
+      overlayLink.target = "_blank";
+      overlayLink.rel = "noopener";
+      overlayLink.setAttribute("aria-label", item.linkText);
+      overlayLink.textContent = "Ver perfil";
+      const overlayMore = document.createElement("button");
+      overlayMore.className = "team-overlay__more";
+      overlayMore.type = "button";
+      overlayMore.setAttribute("aria-label", "Abrir perfil de " + item.name);
+      overlayMore.dataset.openProfile = profileId;
+      overlayMore.textContent = "Ver más";
+      overlay.appendChild(overlayText);
+      overlay.appendChild(overlayLink);
+      overlay.appendChild(overlayMore);
+
+      card.appendChild(photoWrap);
       card.appendChild(nameEl);
-      card.appendChild(summaryEl);
-      card.appendChild(lnk);
+      card.appendChild(moreBtn);
+      card.appendChild(overlay); // last child → sits on top via position:absolute
       grid.appendChild(card);
     });
 
@@ -600,16 +617,59 @@
 
   const renderInnGallery = (sectionData) => {
     const section = el("section", "section section--inn-gallery");
-    const viewport = el("div", "inn-gallery__viewport");
-    const track = el("div", "inn-gallery__track");
-    sectionData.images.forEach((src, index) => {
-      const slide = el("div", `inn-gallery__slide${index === 1 ? " inn-gallery__slide--active" : ""}`);
-      slide.appendChild(image(src, "", "inn-gallery__image"));
-      track.appendChild(slide);
+    const images_list = sectionData.images || [];
+    let current = 0;
+
+    // Main image area
+    const mainWrap = el("div", "inn-gallery__main");
+    const mainImg = document.createElement("img");
+    mainImg.className = "inn-gallery__main-img";
+    mainImg.src = images_list[0] || "";
+    mainImg.alt = "";
+    mainWrap.appendChild(mainImg);
+
+    // Prev / Next buttons
+    const btnPrev = el("button", "inn-gallery__btn inn-gallery__btn--prev", "‹");
+    btnPrev.setAttribute("aria-label", "Anterior");
+    const btnNext = el("button", "inn-gallery__btn inn-gallery__btn--next", "›");
+    btnNext.setAttribute("aria-label", "Siguiente");
+    mainWrap.appendChild(btnPrev);
+    mainWrap.appendChild(btnNext);
+
+    // Thumbnail strip
+    const thumbsWrap = el("div", "inn-gallery__thumbs");
+    const thumbEls = images_list.map((src, i) => {
+      const thumb = document.createElement("img");
+      thumb.className = "inn-gallery__thumb" + (i === 0 ? " inn-gallery__thumb--active" : "");
+      thumb.src = src;
+      thumb.alt = "";
+      thumb.loading = "lazy";
+      thumb.addEventListener("click", () => goTo(i));
+      thumbsWrap.appendChild(thumb);
+      return thumb;
     });
-    viewport.appendChild(track);
-    section.appendChild(viewport);
-    section.appendChild(el("button", "inn-gallery__next", "›"));
+
+    const goTo = (index) => {
+      thumbEls[current].classList.remove("inn-gallery__thumb--active");
+      current = (index + images_list.length) % images_list.length;
+      mainImg.src = images_list[current];
+      thumbEls[current].classList.add("inn-gallery__thumb--active");
+      // Scroll active thumb into view
+      thumbEls[current].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    };
+
+    btnPrev.addEventListener("click", () => goTo(current - 1));
+    btnNext.addEventListener("click", () => goTo(current + 1));
+
+    // Keyboard navigation
+    section.setAttribute("tabindex", "0");
+    section.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") goTo(current + 1);
+      else if (e.key === "ArrowLeft") goTo(current - 1);
+    });
+
+    section.appendChild(mainWrap);
+    section.appendChild(thumbsWrap);
 
     return section;
   };
@@ -798,6 +858,7 @@
       innDark: renderInnDark,
       innAirbnb: renderInnAirbnb,
       innGallery: renderInnGallery,
+      consultingGallery: renderInnGallery,
       cta: renderCta,
       social: renderSocial,
       contact: renderContact,
