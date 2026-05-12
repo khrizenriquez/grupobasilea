@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios de consultoría</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --services-heading: #171718;
+      --services-text: #565a5d;
+      --services-bg: #F8F9FA;
+      --services-max-width: 1680px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--services-bg);
+    }
+
+    body {
+      font-family: "Cabin", Georgia, serif;
+      color: var(--services-text);
+    }
+
+    .consultoria-frame {
+      width: 100%;
+      background: var(--services-bg);
+    }
+
+    .consultoria-shell {
+      max-width: var(--services-max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      align-items: start;
+      background: var(--services-bg);
+    }
+
+    .consultoria-copy {
+      padding: clamp(36px, 4vw, 76px) clamp(28px, 4vw, 56px) clamp(40px, 4vw, 72px) clamp(28px, 7vw, 132px);
+      background: var(--services-bg);
+    }
+
+    .consultoria-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .consultoria-item + .consultoria-item {
+      margin-top: clamp(28px, 3vw, 42px);
+    }
+
+    .consultoria-item h4 {
+      margin: 0 0 10px;
+      color: var(--services-heading);
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: normal;
+    }
+
+    .consultoria-item p {
+      margin: 0;
+      max-width: 64ch;
+      color: var(--services-text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .consultoria-media {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      min-height: 720px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--services-bg);
+    }
+
+    .consultoria-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    @media (max-width: 980px) {
+      .consultoria-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .consultoria-copy {
+        padding: 32px 24px 20px;
+      }
+
+      .consultoria-media {
+        position: relative;
+        top: auto;
+        min-height: 340px;
+        height: clamp(340px, 52vw, 560px);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .consultoria-item h4 {
+        font-size: 20px;
+      }
+
+      .consultoria-item p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .consultoria-item + .consultoria-item {
+        margin-top: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="consultoria-frame" aria-label="Servicios de consultoría">
+    <div class="consultoria-shell">
+      <div class="consultoria-copy">
+        <ul class="consultoria-list">
+          <li class="consultoria-item">
+            <h4>Cuestiones políticas y regulatorias</h4>
+            <p>Asesoramiento sobre marcos legales, reformas institucionales y cumplimiento de normativas internacionales.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Supervisión operacional y rol del gobierno</h4>
+            <p>Fortalecimiento de las capacidades del Estado para facilitar, regular y desarrollar servicios de aviación de manera segura y eficiente.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Infraestructura de aviación</h4>
+            <p>Planificación estratégica y desarrollo de aeropuertos y proveedores de servicios de navegación aérea (ANSP).</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Aerolíneas</h4>
+            <p>Asesoramiento en reestructuración, planificación y gestión organizacional, financiera y operativa.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Proyectos de carga aérea</h4>
+            <p>Estrategias para el desarrollo de la logística de carga, la infraestructura y la conectividad comercial.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Logística</h4>
+            <p>Consultoría especializada en sistemas logísticos, cadenas de suministro, almacenamiento, transporte, distribución y mejora integral de procesos operativos.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Participación del sector privado (APP)</h4>
+            <p>Estructuración y evaluación de modelos de inversión privada y concesiones en infraestructura aeronáutica.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Análisis económico y financiero</h4>
+            <p>Estudios de viabilidad, evaluaciones de mercado y modelaje financiero para proyectos de aviación.</p>
+          </li>
+
+          <li class="consultoria-item">
+            <h4>Mandatos ambientales y de sostenibilidad</h4>
+            <p>Integración de objetivos de descarbonización, estrategias de combustibles de aviación sostenibles (SAF) y cumplimiento ambiental en los proyectos.</p>
+          </li>
+        </ul>
+      </div>
+
+      <figure class="consultoria-media">
+        <img
+          src="https://img1.wsimg.com/isteam/ip/d8c73c7b-5878-4906-a254-c1fb20b2093b/servicios_gib.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:4605,m"
+          alt="Modelo de avión sobre una pista sostenido por dos manos"
+        />
+      </figure>
+    </div>
+  </section>
+</body>
+</html>
