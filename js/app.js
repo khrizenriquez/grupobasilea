@@ -6,11 +6,11 @@
 
   const routes = [
     ["home", "/"],
-    ["about", "/about.html"],
-    ["farm", "/farm.html"],
-    ["inn", "/inn.html"],
-    ["consulting", "/consulting.html"],
-    ["contact", "/contact.html"]
+    ["about", "/about"],
+    ["farm", "/farm"],
+    ["inn", "/inn"],
+    ["consulting", "/consulting"],
+    ["contact", "/contact"]
   ];
 
   const socialLinks = [
